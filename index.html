@@ -549,6 +549,29 @@
     display: block;
   }
 
+  .project-photo.before-after {
+    display: flex;
+  }
+
+  .project-photo.before-after .ba-half {
+    position: relative;
+    width: 50%; height: 100%;
+  }
+
+  .project-photo.before-after .ba-half:first-child {
+    border-right: 2px solid var(--gold);
+  }
+
+  .project-photo.before-after .ba-label {
+    position: absolute;
+    bottom: 10px; left: 10px;
+    font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+    font-weight: 700; color: #fff;
+    background: rgba(13,13,13,0.72);
+    padding: 4px 9px;
+    border-radius: 2px;
+  }
+
   .project-photo-label {
     font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
     color: var(--ink-faint);
@@ -1008,7 +1031,10 @@
 
     <div class="project-grid">
       <div class="project-card">
-        <div class="project-photo"><img src="bathroom-after-1.jpg" alt="Completed bathroom remodel by Ridgeworks Construction — Central Indiana" loading="lazy"></div>
+        <div class="project-photo before-after">
+          <div class="ba-half"><img src="bathroom-before-1.jpg" alt="Bathroom before Ridgeworks Construction remodel — Central Indiana" loading="lazy"><span class="ba-label">Before</span></div>
+          <div class="ba-half"><img src="bathroom-after-1.jpg" alt="Bathroom after Ridgeworks Construction remodel — Central Indiana" loading="lazy"><span class="ba-label">After</span></div>
+        </div>
         <div class="project-info">
           <h3>Bathroom Remodel</h3>
           <p>Central Indiana — full rough-in coordination and phase-gated closeout.</p>
