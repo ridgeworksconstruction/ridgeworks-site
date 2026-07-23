@@ -506,6 +506,75 @@
     border-radius: 2px;
   }
 
+  /* ── FEATURED PROJECT ── */
+  .featured-project {
+    background: var(--paper);
+    padding: 120px 48px;
+  }
+
+  .featured-inner { max-width: 1100px; margin: 0 auto; }
+
+  .featured-header { max-width: 700px; margin-bottom: 48px; }
+
+  .featured-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15; color: var(--ink); margin-top: 16px; margin-bottom: 16px;
+  }
+  .featured-header h2 em { font-style: italic; color: var(--gold-deep); }
+
+  .featured-header p {
+    font-size: 15px; color: var(--ink-soft); line-height: 1.7; font-weight: 300;
+  }
+
+  .featured-hero {
+    aspect-ratio: 16 / 8;
+    overflow: hidden;
+    margin-bottom: 64px;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .featured-hero img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .process-label {
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 600; margin-bottom: 24px;
+  }
+
+  .process-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;
+  }
+
+  .process-photo {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border-bottom: 2px solid rgba(184,150,46,0.4);
+  }
+
+  .process-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .process-step-num {
+    font-size: 10px; letter-spacing: 2px; color: var(--gold-deep); font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .process-step h4 {
+    font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 6px;
+  }
+
+  .process-step p {
+    font-size: 12.5px; color: var(--ink-soft); line-height: 1.6; font-weight: 300;
+  }
+
   /* ── PROJECTS ── */
   .projects {
     background: var(--paper);
@@ -762,11 +831,13 @@
     nav { padding: 0 24px; }
     .nav-links { display: none; }
     .hero { padding: 0 24px 64px; }
-    .problem, .how, .deliverables, .statement, .services, .projects, .cta-section { padding: 80px 24px; }
+    .problem, .how, .deliverables, .statement, .services, .featured-project, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
     .problem-grid, .how-header, .deliverables-header { grid-template-columns: 1fr; gap: 40px; }
     .problem-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,150,46,0.2); padding-top: 40px; }
     .how-steps, .doc-grid, .project-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr 1fr; }
+    .featured-hero { aspect-ratio: 4 / 3; }
     .service-row { grid-template-columns: 1fr; gap: 12px; }
     .service-tag { display: none; }
     .footer-links { display: none; }
@@ -1013,6 +1084,51 @@
         <div class="service-name">Custom & Commercial</div>
         <div class="service-desc">If it needs to be coordinated and executed at a high level, we run it. Call us with what you've got.</div>
         <div class="service-tag">Call for Scope</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<!-- FEATURED PROJECT -->
+<section class="featured-project" id="featured-project">
+  <div class="featured-inner">
+    <div class="featured-header">
+      <div class="section-label">Featured Project</div>
+      <h2>From a sketch on paper<br/>to a <em>finished</em> outdoor living space.</h2>
+      <p>Fully custom design and build — designed by Ridgeworks Construction, executed by Ridgeworks Construction. Full subcontractor coordination across slab, downspout tie-ins, and irrigation, sequenced start to finish under one plan.</p>
+    </div>
+
+    <div class="featured-hero">
+      <img src="featured-hero.jpg" alt="Finished custom outdoor living space built by Ridgeworks Construction — Central Indiana" loading="lazy">
+    </div>
+
+    <div class="process-label">The Build</div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-photo"><img src="ola-process-1.jpg" alt="Downspout and irrigation tie-in trenching" loading="lazy"></div>
+        <div class="process-step-num">Step 01</div>
+        <h4>Drainage &amp; Irrigation Tie-In</h4>
+        <p>Downspout runs and irrigation lines routed and tied in before anything gets covered.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-photo"><img src="ola-process-2.jpg" alt="Hardscape base and layout preparation" loading="lazy"></div>
+        <div class="process-step-num">Step 02</div>
+        <h4>Base &amp; Layout</h4>
+        <p>Sub-base set and forms staged so the slab and planting beds land exactly to plan.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-photo"><img src="ola-process-3.jpg" alt="Concrete slab pour for patio" loading="lazy"></div>
+        <div class="process-step-num">Step 03</div>
+        <h4>Slab Pour</h4>
+        <p>Patio poured to spec — the foundation the entire outdoor space is built on.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-photo"><img src="ola-process-4.jpg" alt="Finished custom outdoor living space" loading="lazy"></div>
+        <div class="process-step-num">Step 04</div>
+        <h4>Finished</h4>
+        <p>Custom patio, planting beds, and outdoor living space — coordinated and closed out.</p>
       </div>
     </div>
   </div>
