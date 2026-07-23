@@ -3,8 +3,53 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ridgeworks Construction · Project Coordination & Execution</title>
-<meta name="description" content="Ridgeworks Construction. Project Coordination & Execution. Columbus, Indiana. 317.954.9394." />
+<title>Ridgeworks Construction · Project Coordination & Execution | Columbus, Indiana</title>
+<meta name="description" content="Ridgeworks Construction runs your remodel or build like a professional job — sequenced, documented, and closed out right. Columbus, Indiana. 317.954.9394." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://ridgeworksconstruction.com/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Ridgeworks Construction" />
+<meta property="og:title" content="Ridgeworks Construction · Project Coordination & Execution" />
+<meta property="og:description" content="We show up with the job already sequenced. Pre-construction planning, trade sequencing, and documentation on every project. Columbus, Indiana." />
+<meta property="og:url" content="https://ridgeworksconstruction.com/" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Ridgeworks Construction · Project Coordination & Execution" />
+<meta name="twitter:description" content="We show up with the job already sequenced. Columbus, Indiana. 317.954.9394." />
+
+<!-- Local business structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Ridgeworks Construction",
+  "description": "Project coordination and execution for residential remodels, additions, and renovations. Pre-construction planning, trade sequencing, and documented closeout on every job.",
+  "telephone": "+1-317-954-9394",
+  "email": "cody@ridgeworksconstruction.com",
+  "url": "https://ridgeworksconstruction.com/",
+  "founder": {
+    "@type": "Person",
+    "name": "Cody Ridge"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Columbus",
+    "addressRegion": "IN",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Columbus, Indiana"
+  },
+  "priceRange": "$$",
+  "foundingDate": "2024"
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
@@ -171,6 +216,9 @@
     text-decoration: none; border-radius: 2px;
     transition: all 0.2s;
     display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
   }
   .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
 
@@ -462,6 +510,57 @@
     border-radius: 2px;
   }
 
+  /* ── PROJECTS ── */
+  .projects {
+    background: var(--off-black);
+    padding: 120px 48px;
+  }
+
+  .projects-inner { max-width: 1100px; margin: 0 auto; }
+
+  .projects-header { margin-bottom: 60px; max-width: 640px; }
+
+  .projects-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15; color: var(--white); margin-top: 16px; margin-bottom: 16px;
+  }
+  .projects-header h2 em { font-style: italic; color: var(--gold); }
+
+  .projects-header p {
+    font-size: 15px; color: var(--mgray); line-height: 1.7; font-weight: 300;
+  }
+
+  .project-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  }
+
+  .project-card {
+    background: var(--black);
+  }
+
+  .project-photo {
+    aspect-ratio: 4 / 3;
+    background: var(--near-black);
+    display: flex; align-items: center; justify-content: center;
+    border-bottom: 1px solid rgba(184,150,46,0.15);
+  }
+
+  .project-photo-label {
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+  }
+
+  .project-info { padding: 24px 28px; }
+
+  .project-info h3 {
+    font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 6px;
+  }
+
+  .project-info p {
+    font-size: 13px; color: var(--mgray); line-height: 1.6; font-weight: 300;
+  }
+
   /* ── CTA ── */
   .cta-section {
     background: var(--off-black);
@@ -478,7 +577,7 @@
   }
 
   .cta-inner {
-    max-width: 700px; margin: 0 auto; text-align: center;
+    max-width: 900px; margin: 0 auto; text-align: center;
     position: relative; z-index: 1;
   }
 
@@ -489,7 +588,7 @@
   }
   .cta-inner h2 em { font-style: italic; color: var(--gold); }
 
-  .cta-inner p {
+  .cta-inner > p {
     font-size: 16px; color: var(--mgray); line-height: 1.7;
     font-weight: 300; margin-bottom: 48px;
   }
@@ -503,6 +602,95 @@
     margin-top: 32px;
   }
   .cta-phone a { color: var(--gold); text-decoration: none; }
+
+  .cta-divider {
+    display: flex; align-items: center; gap: 16px;
+    max-width: 480px; margin: 56px auto; color: var(--mgray);
+    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  }
+  .cta-divider::before, .cta-divider::after {
+    content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.1);
+  }
+
+  /* ── LEAD FORM ── */
+  .lead-form {
+    max-width: 560px; margin: 0 auto; text-align: left;
+  }
+
+  .form-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;
+  }
+
+  .form-field { margin-bottom: 16px; }
+
+  .form-field label {
+    display: block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 8px;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    background: var(--near-black);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    padding: 14px 16px;
+    border-radius: 2px;
+    transition: border-color 0.2s;
+  }
+
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    outline: none; border-color: var(--gold);
+  }
+
+  .form-field textarea {
+    min-height: 110px; resize: vertical;
+  }
+
+  .form-field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23B8962E'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+  }
+
+  .form-submit {
+    width: 100%;
+    padding: 18px 36px;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    border: none; border-radius: 2px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.2s;
+    margin-top: 8px;
+  }
+  .form-submit:hover { background: var(--gold-light); }
+
+  .form-note {
+    font-size: 12px; color: rgba(255,255,255,0.4); text-align: center;
+    margin-top: 16px; line-height: 1.6;
+  }
+
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 48px 24px;
+    border: 1px solid rgba(184,150,46,0.3);
+    border-radius: 2px;
+  }
+  .form-success h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px; color: var(--white); margin-bottom: 12px;
+  }
+  .form-success p { font-size: 14px; color: var(--mgray); }
 
   /* ── FOOTER ── */
   footer {
@@ -548,14 +736,15 @@
     nav { padding: 0 24px; }
     .nav-links { display: none; }
     .hero { padding: 0 24px 64px; }
-    .problem, .how, .deliverables, .statement, .services, .cta-section { padding: 80px 24px; }
+    .problem, .how, .deliverables, .statement, .services, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
     .problem-grid, .how-header, .deliverables-header { grid-template-columns: 1fr; gap: 40px; }
     .problem-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,150,46,0.2); padding-top: 40px; }
-    .how-steps, .doc-grid { grid-template-columns: 1fr; }
+    .how-steps, .doc-grid, .project-grid { grid-template-columns: 1fr; }
     .service-row { grid-template-columns: 1fr; gap: 12px; }
     .service-tag { display: none; }
     .footer-links { display: none; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
   }
 </style>
 </head>
@@ -570,6 +759,7 @@
   <ul class="nav-links">
     <li><a href="#how">How We Work</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Recent Work</a></li>
     <li><a href="#contact" class="nav-cta">Get Started</a></li>
   </ul>
 </nav>
@@ -804,6 +994,43 @@
 
 <div class="gold-rule"></div>
 
+<!-- RECENT WORK / PROJECTS -->
+<section class="projects" id="projects">
+  <div class="projects-inner">
+    <div class="projects-header">
+      <div class="section-label">Recent Work</div>
+      <h2>Projects <em>run</em><br/>the Ridgeworks way.</h2>
+      <p>A sample of the coordination and execution standard applied on real jobs. Photos and case details added as projects close out.</p>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-photo"><span class="project-photo-label">Photo Coming Soon</span></div>
+        <div class="project-info">
+          <h3>Bathroom Remodel</h3>
+          <p>Columbus, IN — full rough-in coordination and phase-gated closeout.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-photo"><span class="project-photo-label">Photo Coming Soon</span></div>
+        <div class="project-info">
+          <h3>Kitchen Remodel</h3>
+          <p>Columbus, IN — cabinet layout and appliance specs locked before rough-in.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-photo"><span class="project-photo-label">Photo Coming Soon</span></div>
+        <div class="project-info">
+          <h3>Basement Finish</h3>
+          <p>Columbus, IN — egress, mechanical, and electrical sequenced for a clean inspection pass.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
 <!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="cta-beam"></div>
@@ -811,6 +1038,51 @@
     <div class="section-label" style="justify-content: center; margin-bottom: 32px;">Ready to Start</div>
     <h2>Let's run your<br/>job <em>right.</em></h2>
     <p>Tell us what you've got. We'll tell you exactly how we'd execute it — before we ever shake hands.</p>
+
+    <!-- Lead capture form — posts to Formspree. Replace YOUR_FORM_ID with your real endpoint. -->
+    <form class="lead-form" id="leadForm" action="https://formspree.io/f/xgoglgyr" method="POST">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-field">
+        <label for="project_type">Project Type</label>
+        <select id="project_type" name="project_type" required>
+          <option value="" disabled selected>Select one</option>
+          <option>Bathroom Remodel</option>
+          <option>Kitchen Remodel</option>
+          <option>Basement Finish</option>
+          <option>Room Addition</option>
+          <option>Whole Home Renovation</option>
+          <option>Custom / Commercial</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="details">Project Details</label>
+        <textarea id="details" name="details" placeholder="Scope, timeline, budget range — whatever you've got." required></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="New lead from ridgeworksconstruction.com" />
+      <button type="submit" class="form-submit">Send Project Details</button>
+      <div class="form-note">We respond within one business day. No spam, no follow-up calls unless you ask for one.</div>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      <h3>Got it.</h3>
+      <p>We'll review your project and get back to you within one business day.</p>
+    </div>
+
+    <div class="cta-divider">Or reach us directly</div>
+
     <div class="cta-actions">
       <a href="tel:3179549394" class="btn-primary">Call 317.954.9394</a>
       <a href="mailto:cody@ridgeworksconstruction.com" class="btn-ghost">Send an Email</a>
@@ -830,10 +1102,40 @@
   <ul class="footer-links">
     <li><a href="#how">How We Work</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Recent Work</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <div class="footer-copy">© 2024 Ridgeworks Construction · Columbus, Indiana</div>
+  <div class="footer-copy">© 2026 Ridgeworks Construction · Columbus, Indiana</div>
 </footer>
+
+<script>
+  // Submit the lead form via fetch so we can show an inline success state
+  // instead of redirecting to Formspree's default confirmation page.
+  const leadForm = document.getElementById('leadForm');
+  const formSuccess = document.getElementById('formSuccess');
+
+  leadForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = new FormData(leadForm);
+
+    fetch(leadForm.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+      .then((response) => {
+        if (response.ok) {
+          leadForm.style.display = 'none';
+          formSuccess.style.display = 'block';
+        } else {
+          alert('Something went wrong sending your project details. Please call or email us directly.');
+        }
+      })
+      .catch(() => {
+        alert('Something went wrong sending your project details. Please call or email us directly.');
+      });
+  });
+</script>
 
 </body>
 </html>
