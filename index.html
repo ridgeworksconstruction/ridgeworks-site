@@ -540,6 +540,13 @@
     background: var(--paper);
     display: flex; align-items: center; justify-content: center;
     border-bottom: 1px solid rgba(184,150,46,0.2);
+    overflow: hidden;
+  }
+
+  .project-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .project-photo-label {
@@ -1001,7 +1008,7 @@
 
     <div class="project-grid">
       <div class="project-card">
-        <div class="project-photo"><span class="project-photo-label">Photo Coming Soon</span></div>
+        <div class="project-photo"><img src="bathroom-after-1.jpg" alt="Completed bathroom remodel by Ridgeworks Construction — Central Indiana" loading="lazy"></div>
         <div class="project-info">
           <h3>Bathroom Remodel</h3>
           <p>Central Indiana — full rough-in coordination and phase-gated closeout.</p>
