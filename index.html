@@ -36,10 +36,18 @@
   "telephone": "+1-317-954-9394",
   "email": "cody@ridgeworksconstruction.com",
   "url": "https://ridgeworksconstruction.com/",
-  "founder": {
-    "@type": "Person",
-    "name": "Cody Ridge"
-  },
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Cody Ridge",
+      "jobTitle": "Coordination"
+    },
+    {
+      "@type": "Person",
+      "name": "Brandon Larrison",
+      "jobTitle": "Execution"
+    }
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressRegion": "IN",
@@ -109,6 +117,17 @@
     font-size: 8px; letter-spacing: 3px; text-transform: uppercase;
     color: var(--gold); line-height: 1;
   }
+
+  .nav-right {
+    display: flex; align-items: center; gap: 32px;
+  }
+
+  .nav-phone {
+    font-size: 13px; letter-spacing: 0.5px; font-weight: 700;
+    color: var(--gold-light); text-decoration: none; white-space: nowrap;
+    transition: color 0.2s;
+  }
+  .nav-phone:hover { color: var(--white); }
 
   .nav-links {
     display: flex; align-items: center; gap: 36px; list-style: none;
@@ -463,6 +482,105 @@
 
   .statement-attr {
     font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--ink-soft);
+  }
+
+  /* ── ABOUT US ── */
+  .about {
+    background: var(--paper);
+    padding: 120px 48px;
+    text-align: center;
+  }
+
+  .about-header { max-width: 640px; margin: 0 auto 56px; }
+
+  .about-header .section-label { justify-content: center; }
+
+  .about-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15; color: var(--ink); margin-top: 16px; margin-bottom: 16px;
+  }
+  .about-header h2 em { font-style: italic; color: var(--gold-deep); }
+
+  .about-header p {
+    font-size: 15px; color: var(--ink-soft); line-height: 1.7; font-weight: 300;
+  }
+
+  .founder-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    max-width: 720px; margin: 0 auto;
+  }
+
+  .founder-card {
+    background: var(--paper-card);
+    border-top: 2px solid var(--gold);
+    padding: 44px 32px;
+  }
+
+  .founder-avatar {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: var(--ink); color: var(--gold-light);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Serif Display', serif; font-size: 20px;
+    margin: 0 auto 20px;
+  }
+
+  .founder-card h3 { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+
+  .founder-role {
+    display: inline-block; font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold-deep); border: 1px solid rgba(184,150,46,0.4);
+    padding: 5px 12px; border-radius: 2px; margin-bottom: 16px;
+  }
+
+  .founder-card p { font-size: 13px; color: var(--ink-soft); line-height: 1.6; font-weight: 300; }
+
+  .about-note {
+    margin-top: 40px; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  /* ── REVIEWS ── */
+  .reviews {
+    background: var(--paper);
+    padding: 120px 48px;
+    text-align: center;
+  }
+
+  .reviews-header { max-width: 640px; margin: 0 auto; }
+
+  .reviews-header .section-label { justify-content: center; }
+
+  .reviews-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15; color: var(--ink); margin-top: 16px; margin-bottom: 16px;
+  }
+  .reviews-header h2 em { font-style: italic; color: var(--gold-deep); }
+
+  .reviews-header p {
+    font-size: 15px; color: var(--ink-soft); line-height: 1.7; font-weight: 300;
+  }
+
+  .review-placeholder {
+    max-width: 640px; margin: 48px auto 0;
+    padding: 48px 40px;
+    background: var(--paper-card);
+    border: 1px dashed rgba(184,150,46,0.4);
+  }
+
+  .review-placeholder .quote-mark {
+    font-family: 'DM Serif Display', serif; font-size: 48px; line-height: 1;
+    color: var(--gold-deep); margin-bottom: 12px;
+  }
+
+  .review-placeholder p {
+    font-size: 15px; color: var(--ink-soft); line-height: 1.7; font-weight: 300; font-style: italic;
+  }
+
+  .review-placeholder-label {
+    margin-top: 20px; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--ink-faint);
   }
 
   /* ── SERVICES ── */
@@ -836,13 +954,14 @@
     nav { padding: 0 24px; }
     .nav-links { display: none; }
     .hero { padding: 0 24px 64px; }
-    .problem, .how, .deliverables, .statement, .services, .featured-project, .projects, .cta-section { padding: 80px 24px; }
+    .problem, .how, .deliverables, .statement, .services, .about, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
     .problem-grid, .how-header, .deliverables-header { grid-template-columns: 1fr; gap: 40px; }
     .problem-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,150,46,0.2); padding-top: 40px; }
     .how-steps, .doc-grid, .project-grid { grid-template-columns: 1fr; }
     .process-grid { grid-template-columns: 1fr 1fr; }
     .featured-hero { aspect-ratio: 4 / 3; }
+    .founder-grid { grid-template-columns: 1fr; }
     .service-row { grid-template-columns: 1fr; gap: 12px; }
     .service-tag { display: none; }
     .footer-links { display: none; }
@@ -858,12 +977,16 @@
     <span class="nav-logo-name">Ridgeworks</span>
     <span class="nav-logo-sub">Project Coordination & Execution</span>
   </div>
-  <ul class="nav-links">
-    <li><a href="#how">How We Work</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#projects">Recent Work</a></li>
-    <li><a href="#contact" class="nav-cta">Get Started</a></li>
-  </ul>
+  <div class="nav-right">
+    <a href="tel:3179549394" class="nav-phone">317.954.9394</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#how">How We Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Recent Work</a></li>
+      <li><a href="#contact" class="nav-cta">Get Started</a></li>
+    </ul>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -923,6 +1046,34 @@
       </div>
     </div>
   </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<!-- ABOUT US -->
+<section class="about" id="about">
+  <div class="about-header">
+    <div class="section-label">About Us</div>
+    <h2>Two partners.<br/><em>One standard.</em></h2>
+    <p>Ridgeworks Construction is built and run by two partners who split the job the way it should be split — one plans it, one runs it. Central Indiana, start to finish.</p>
+  </div>
+
+  <div class="founder-grid">
+    <div class="founder-card">
+      <div class="founder-avatar">CR</div>
+      <div class="founder-role">Coordination</div>
+      <h3>Cody Ridge</h3>
+      <p>Plans the sequence, locks the decisions early, and keeps the job on schedule from Day 1 to closeout.</p>
+    </div>
+    <div class="founder-card">
+      <div class="founder-avatar">BL</div>
+      <div class="founder-role">Execution</div>
+      <h3>Brandon Larrison</h3>
+      <p>Runs the crew, runs the site, and gets the plan built the way it was drawn up.</p>
+    </div>
+  </div>
+
+  <div class="about-note">Full bios coming soon</div>
 </section>
 
 <div class="gold-rule"></div>
@@ -1136,6 +1287,22 @@
         <p>Custom patio, planting beds, and outdoor living space — coordinated and closed out.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-header">
+    <div class="section-label">Client Reviews</div>
+    <h2>What clients say<br/>once the job's <em>done.</em></h2>
+    <p>Real feedback from real Ridgeworks clients — added here as projects close out and reviews come in.</p>
+  </div>
+  <div class="review-placeholder">
+    <div class="quote-mark">"</div>
+    <p>First reviews are on the way. Check back soon.</p>
+    <div class="review-placeholder-label">Reviews Coming Soon</div>
   </div>
 </section>
 
