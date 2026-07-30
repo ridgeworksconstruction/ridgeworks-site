@@ -825,12 +825,15 @@
   }
 
   .project-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
   }
 
   .project-card {
     background: var(--paper-card);
+    display: block; text-decoration: none; color: inherit;
+    transition: opacity 0.2s ease;
   }
+  a.project-card:hover { opacity: 0.85; }
 
   .project-photo {
     aspect-ratio: 4 / 3;
@@ -1522,20 +1525,13 @@
           <p>Central Indiana — full rough-in coordination and phase-gated closeout.</p>
         </div>
       </div>
-      <div class="project-card">
-        <div class="project-photo"><span class="project-photo-label">Photo Coming Soon</span></div>
+      <a class="project-card" href="#featured-project">
+        <div class="project-photo"><img src="featured-hero.jpg" alt="Finished custom outdoor living space built by Ridgeworks Construction — Central Indiana" loading="lazy"></div>
         <div class="project-info">
-          <h3>Kitchen Remodel</h3>
-          <p>Central Indiana — cabinet layout and appliance specs locked before rough-in.</p>
+          <h3>Outdoor Living Space</h3>
+          <p>Central Indiana — full design and build, subcontractor coordination across slab, drainage, and irrigation. See the full build below ↓</p>
         </div>
-      </div>
-      <div class="project-card">
-        <div class="project-photo"><span class="project-photo-label">Photo Coming Soon</span></div>
-        <div class="project-info">
-          <h3>Basement Finish</h3>
-          <p>Central Indiana — egress, mechanical, and electrical sequenced for a clean inspection pass.</p>
-        </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
