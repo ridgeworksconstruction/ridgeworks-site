@@ -7,6 +7,9 @@
 <meta name="description" content="Ridgeworks Construction runs your remodel or build like a professional job — sequenced, documented, and closed out right. Central Indiana. 317.954.9394." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://ridgeworksconstruction.com/" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -53,10 +56,20 @@
     "addressRegion": "IN",
     "addressCountry": "US"
   },
-  "areaServed": {
-    "@type": "Place",
-    "name": "Central Indiana"
-  },
+  "areaServed": [
+    { "@type": "Place", "name": "Central Indiana" },
+    { "@type": "City", "name": "Fishers, IN" },
+    { "@type": "City", "name": "Carmel, IN" },
+    { "@type": "City", "name": "Noblesville, IN" },
+    { "@type": "City", "name": "Westfield, IN" },
+    { "@type": "City", "name": "Zionsville, IN" },
+    { "@type": "City", "name": "Whitestown, IN" },
+    { "@type": "City", "name": "Brownsburg, IN" },
+    { "@type": "City", "name": "Franklin, IN" },
+    { "@type": "City", "name": "Fortville, IN" },
+    { "@type": "City", "name": "McCordsville, IN" },
+    { "@type": "City", "name": "Columbus, IN" }
+  ],
   "priceRange": "$$",
   "foundingDate": "2026"
 }
@@ -147,6 +160,22 @@
     letter-spacing: 1px !important;
   }
   .nav-cta:hover { background: var(--gold-light) !important; color: var(--black) !important; }
+
+  .nav-toggle {
+    display: none;
+    background: none; border: none; cursor: pointer;
+    width: 26px; height: 18px; position: relative; padding: 0; flex-shrink: 0;
+  }
+  .nav-toggle span {
+    display: block; position: absolute; left: 0; right: 0; height: 2px;
+    background: var(--white); transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .nav-toggle span:nth-child(1) { top: 0; }
+  .nav-toggle span:nth-child(2) { top: 8px; }
+  .nav-toggle span:nth-child(3) { top: 16px; }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
   /* ── HERO ── */
   .hero {
@@ -991,8 +1020,12 @@
     background: var(--black);
     border-top: 1px solid rgba(184,150,46,0.15);
     padding: 48px;
+    display: flex; flex-direction: column; gap: 24px;
+  }
+
+  .footer-top {
     display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 24px;
+    flex-wrap: wrap; gap: 24px; width: 100%;
   }
 
   .footer-logo { display: flex; flex-direction: column; gap: 4px; }
@@ -1009,6 +1042,12 @@
 
   .footer-copy {
     font-size: 11px; color: rgba(255,255,255,0.2); letter-spacing: 0.5px;
+  }
+
+  .footer-area {
+    font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 0.2px;
+    line-height: 1.7; max-width: 900px;
+    border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px;
   }
 
   /* ── ANIMATIONS ── */
@@ -1028,7 +1067,21 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav { padding: 0 24px; }
-    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    .nav-links {
+      display: none;
+      position: absolute; top: 64px; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--black);
+      border-bottom: 1px solid rgba(184,150,46,0.15);
+      padding: 8px 24px 24px;
+      max-height: calc(100vh - 64px); overflow-y: auto;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links li a { display: block; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-links li:last-child a { border-bottom: none; }
+    .nav-links .nav-cta { text-align: center; margin-top: 12px; }
     .hero { padding: 0 24px 64px; }
     .problem, .how, .deliverables, .statement, .services, .about, .capabilities, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
@@ -1055,11 +1108,15 @@
   </div>
   <div class="nav-right">
     <a href="tel:3179549394" class="nav-phone">317.954.9394</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#capabilities">What We Do</a></li>
       <li><a href="#how">How We Work</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#featured-project">Featured Project</a></li>
       <li><a href="#projects">Recent Work</a></li>
       <li><a href="#contact" class="nav-cta">Get Started</a></li>
     </ul>
@@ -1549,17 +1606,20 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    <span class="footer-logo-name">RIDGEWORKS</span>
-    <span class="footer-logo-sub">Project Coordination & Execution</span>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <span class="footer-logo-name">RIDGEWORKS</span>
+      <span class="footer-logo-sub">Project Coordination & Execution</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#how">How We Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Recent Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Ridgeworks Construction · Central Indiana</div>
   </div>
-  <ul class="footer-links">
-    <li><a href="#how">How We Work</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#projects">Recent Work</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="footer-copy">© 2026 Ridgeworks Construction · Central Indiana</div>
+  <div class="footer-area">Serving all of Central Indiana — including Fishers, Carmel, Noblesville, Westfield, Zionsville, Whitestown, Brownsburg, Franklin, Fortville, McCordsville, and Columbus. Happy to travel further when the project calls for it.</div>
 </footer>
 
 <script>
@@ -1589,6 +1649,28 @@
         alert('Something went wrong sending your project details. Please call or email us directly.');
       });
   });
+</script>
+
+<script>
+  // Mobile nav toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function () {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 </script>
 
 </body>
