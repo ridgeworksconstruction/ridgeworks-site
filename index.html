@@ -774,6 +774,49 @@
     font-size: 12.5px; color: var(--ink-soft); line-height: 1.6; font-weight: 300;
   }
 
+  /* ── DETAILS ── */
+  .details {
+    background: var(--off-black);
+    padding: 120px 48px;
+  }
+
+  .details-inner { max-width: 1100px; margin: 0 auto; }
+
+  .details-header { max-width: 640px; margin: 0 auto 56px; text-align: center; }
+
+  .details-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15; color: var(--white); margin-top: 16px; margin-bottom: 16px;
+  }
+  .details-header h2 em { font-style: italic; color: var(--gold); }
+
+  .details-header p {
+    font-size: 15px; color: var(--mgray); line-height: 1.7; font-weight: 300;
+  }
+
+  .details-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
+  }
+
+  .detail-item { display: flex; flex-direction: column; }
+
+  .detail-photo {
+    overflow: hidden;
+    margin-bottom: 16px;
+    border-bottom: 2px solid rgba(184,150,46,0.4);
+  }
+
+  .detail-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .detail-item p {
+    font-size: 12.5px; color: var(--mgray); line-height: 1.6; font-weight: 300;
+  }
+
   /* ── PROJECTS ── */
   .projects {
     background: var(--paper);
@@ -1030,11 +1073,11 @@
     nav { padding: 0 24px; }
     .nav-links { display: none; }
     .hero { padding: 0 24px 64px; }
-    .problem, .how, .deliverables, .statement, .services, .about, .capabilities, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
+    .problem, .how, .deliverables, .statement, .services, .about, .capabilities, .reviews, .featured-project, .details, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
     .problem-grid, .how-header, .deliverables-header { grid-template-columns: 1fr; gap: 40px; }
     .problem-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,150,46,0.2); padding-top: 40px; }
-    .how-steps, .doc-grid, .project-grid, .capability-grid { grid-template-columns: 1fr; }
+    .how-steps, .doc-grid, .project-grid, .capability-grid, .details-grid { grid-template-columns: 1fr; }
     .process-grid { grid-template-columns: 1fr 1fr; }
     .featured-hero { aspect-ratio: 4 / 3; }
     .founder-grid { grid-template-columns: 1fr; }
@@ -1412,6 +1455,38 @@
         <div class="process-step-num">Step 04</div>
         <h4>Finished</h4>
         <p>Custom patio, planting beds, and outdoor living space — coordinated and closed out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<!-- DETAILS -->
+<section class="details" id="details">
+  <div class="details-inner">
+    <div class="details-header">
+      <div class="section-label" style="justify-content: center;">The Details</div>
+      <h2>Close enough<br/>to see the <em>craftsmanship.</em></h2>
+      <p>The parts that don't show up in a wide shot — but are the difference between a job that looks finished and one that actually is.</p>
+    </div>
+
+    <div class="details-grid">
+      <div class="detail-item">
+        <div class="detail-photo" style="aspect-ratio: 3 / 4;"><img src="detail-1.jpg" alt="Planting bed detail along outdoor living space" loading="lazy"></div>
+        <p>Planting beds filled in and framed clean against the stone — no gaps, no afterthought.</p>
+      </div>
+      <div class="detail-item">
+        <div class="detail-photo" style="aspect-ratio: 3 / 4;"><img src="detail-2.jpg" alt="Composite trim meeting poured concrete step detail" loading="lazy"></div>
+        <p>Composite trim meets poured concrete tight to the line — no gaps to caulk over later.</p>
+      </div>
+      <div class="detail-item">
+        <div class="detail-photo" style="aspect-ratio: 16 / 9;"><img src="detail-3.jpg" alt="Stepping stone walkway tied into finished patio step" loading="lazy"></div>
+        <p>Stepping stones set true, running right up to the finished step without a seam.</p>
+      </div>
+      <div class="detail-item">
+        <div class="detail-photo" style="aspect-ratio: 4 / 3;"><img src="detail-4.jpg" alt="Composite planter box corner joinery detail" loading="lazy"></div>
+        <p>Mitered corners on the planter box — built to hold up, not just to look good on day one.</p>
       </div>
     </div>
   </div>
