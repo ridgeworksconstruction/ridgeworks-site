@@ -332,6 +332,81 @@
     font-size: 15px; color: var(--ink-soft); line-height: 1.6;
   }
 
+  /* ── CAPABILITIES ── */
+  .capabilities {
+    background: var(--off-black);
+    padding: 120px 48px;
+  }
+
+  .capabilities-inner { max-width: 1100px; margin: 0 auto; }
+
+  .capabilities-header { max-width: 680px; margin: 0 auto 64px; text-align: center; }
+
+  .capabilities-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15; color: var(--white); margin-top: 16px; margin-bottom: 16px;
+  }
+  .capabilities-header h2 em { font-style: italic; color: var(--gold); }
+
+  .capabilities-header p {
+    font-size: 15px; color: var(--mgray); line-height: 1.7; font-weight: 300;
+  }
+
+  .capability-tier { margin-bottom: 48px; }
+  .capability-tier:last-of-type { margin-bottom: 0; }
+
+  .capability-tier-label {
+    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); font-weight: 700; margin-bottom: 20px;
+  }
+
+  .capability-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .capability-card {
+    background: var(--off-black);
+    padding: 36px 28px;
+  }
+
+  .capability-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 13px; color: var(--gold);
+    letter-spacing: 1px; margin-bottom: 16px;
+  }
+
+  .capability-card h3 {
+    font-size: 15px; font-weight: 700; color: var(--white);
+    margin-bottom: 10px; letter-spacing: 0.2px;
+  }
+
+  .capability-card p {
+    font-size: 13px; color: var(--mgray); line-height: 1.6; font-weight: 300;
+  }
+
+  .capability-segments {
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .capability-segments span {
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold-light);
+    padding: 8px 18px;
+    border: 1px solid rgba(184,150,46,0.35);
+    border-radius: 2px;
+  }
+
+  .capability-contact {
+    text-align: center; margin-top: 40px;
+    font-size: 12px; color: var(--mgray); letter-spacing: 0.3px;
+  }
+  .capability-contact a { color: var(--gold-light); text-decoration: none; }
+  .capability-contact a:hover { color: var(--white); }
+
   /* ── HOW WE WORK ── */
   .how {
     background: var(--paper);
@@ -954,11 +1029,11 @@
     nav { padding: 0 24px; }
     .nav-links { display: none; }
     .hero { padding: 0 24px 64px; }
-    .problem, .how, .deliverables, .statement, .services, .about, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
+    .problem, .how, .deliverables, .statement, .services, .about, .capabilities, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
     .problem-grid, .how-header, .deliverables-header { grid-template-columns: 1fr; gap: 40px; }
     .problem-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,150,46,0.2); padding-top: 40px; }
-    .how-steps, .doc-grid, .project-grid { grid-template-columns: 1fr; }
+    .how-steps, .doc-grid, .project-grid, .capability-grid { grid-template-columns: 1fr; }
     .process-grid { grid-template-columns: 1fr 1fr; }
     .featured-hero { aspect-ratio: 4 / 3; }
     .founder-grid { grid-template-columns: 1fr; }
@@ -981,6 +1056,7 @@
     <a href="tel:3179549394" class="nav-phone">317.954.9394</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#capabilities">What We Do</a></li>
       <li><a href="#how">How We Work</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Recent Work</a></li>
@@ -1072,6 +1148,58 @@
   </div>
 
   <div class="about-note">Full bios coming soon</div>
+</section>
+
+<div class="gold-rule"></div>
+
+<!-- CAPABILITIES -->
+<section class="capabilities" id="capabilities">
+  <div class="capabilities-inner">
+    <div class="capabilities-header">
+      <div class="section-label" style="justify-content: center;">What We Do</div>
+      <h2>One standard,<br/>applied at <em>every scale.</em></h2>
+      <p>The same coordination discipline runs through every job — whether that's a remodel we're running today or a full development we're ready to run when the call comes in.</p>
+    </div>
+
+    <div class="capability-tier">
+      <div class="capability-tier-label">Right Now</div>
+      <div class="capability-grid">
+        <div class="capability-card">
+          <h3>Remodels &amp; Renovations</h3>
+          <p>Hands-on coordination and execution, design through closeout, on every job we run.</p>
+        </div>
+        <div class="capability-card">
+          <h3>Design Coordination</h3>
+          <p>Sketch-stage design work, coordinated so what's drawn is what actually gets built.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="capability-tier">
+      <div class="capability-tier-label">When It's Called For</div>
+      <div class="capability-grid">
+        <div class="capability-card">
+          <h3>Pre-Construction &amp; Due Diligence</h3>
+          <p>Site analysis and feasibility work done before a decision gets made — not after.</p>
+        </div>
+        <div class="capability-card">
+          <h3>Budget &amp; Proposal Review</h3>
+          <p>Got a proposal in hand? We'll check the scope and pricing before you sign — whether it's a remodel bid or a proposal on a much bigger build.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="capability-segments">
+      <span>Residential</span>
+      <span>Multifamily</span>
+      <span>Mixed-Use</span>
+      <span>Build-to-Suit</span>
+    </div>
+
+    <div class="capability-contact">
+      Working on something larger in scope? <a href="tel:3179549394">Call</a> or <a href="mailto:cody@ridgeworksconstruction.com">email</a> directly — no form needed.
+    </div>
+  </div>
 </section>
 
 <div class="gold-rule"></div>
