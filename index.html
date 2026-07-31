@@ -877,6 +877,20 @@
     border-radius: 2px;
   }
 
+  .project-photo.before-after.stacked {
+    flex-direction: column;
+    aspect-ratio: 2 / 3;
+  }
+
+  .project-photo.before-after.stacked .ba-half {
+    width: 100%; height: 50%;
+  }
+
+  .project-photo.before-after.stacked .ba-half:first-child {
+    border-right: none;
+    border-bottom: 2px solid var(--gold);
+  }
+
   .project-photo-label {
     font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
     color: var(--ink-faint);
@@ -1539,9 +1553,9 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
         </div>
       </div>
       <a class="project-card" href="#featured-project">
-        <div class="project-photo before-after">
-          <div class="ba-half"><img src="ola-before-1.jpg" alt="Backyard before Ridgeworks Construction outdoor living space build — McCordsville, IN" loading="lazy"><span class="ba-label">Before</span></div>
-          <div class="ba-half"><img src="ola-after-1.jpg" alt="Finished custom outdoor living space built by Ridgeworks Construction — McCordsville, IN" loading="lazy"><span class="ba-label">After</span></div>
+        <div class="project-photo before-after stacked">
+          <div class="ba-half"><img src="ola-before-horiz-1.jpg" alt="Backyard before Ridgeworks Construction outdoor living space build — McCordsville, IN" loading="lazy"><span class="ba-label">Before</span></div>
+          <div class="ba-half"><img src="ola-after-horiz-1.jpg" alt="Finished custom outdoor living space built by Ridgeworks Construction — McCordsville, IN" loading="lazy"><span class="ba-label">After</span></div>
         </div>
         <div class="project-info">
           <h3>Outdoor Living Space</h3>
