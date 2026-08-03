@@ -576,10 +576,6 @@
 
   .statement blockquote em { color: var(--gold-deep); font-style: normal; }
 
-  .statement-attr {
-    font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--ink-soft);
-  }
-
   /* ── ABOUT US ── */
   .about {
     background: var(--paper);
@@ -1084,8 +1080,17 @@
     .nav-links li a { display: block; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .nav-links li:last-child a { border-bottom: none; }
     .nav-links .nav-cta { text-align: center; margin-top: 12px; }
-    .hero { padding: 0 24px 64px; }
-    .hero-bg { background-position: 65% 50%; }
+    .hero {
+      min-height: auto;
+      justify-content: flex-start;
+      padding: 220px 24px 48px;
+    }
+    .hero-bg {
+      background-size: contain;
+      background-position: center 24px;
+      background-repeat: no-repeat;
+    }
+    .hero-scroll { display: none; }
     .offerings, .how, .deliverables, .statement, .services, .about, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
     .offerings-grid, .how-header, .deliverables-header { grid-template-columns: 1fr; gap: 40px; }
@@ -1182,7 +1187,7 @@
   <div class="about-header">
     <div class="section-label">About Us</div>
     <h2>Two partners.<br/><em>One standard.</em></h2>
-    <p>Ridgeworks Construction is run by two partners who both coordinate and execute — together, on every job, from Day 1. We don't split planning from building. That split is exactly where the information gets lost and the sequence breaks.</p>
+    <p>Ridgeworks Construction is run by two partners who both coordinate and execute — together, on every job, from Day 1. Most costly surprises happen in the gap between the person who planned a job and the person building it. We closed that gap. That's the whole reason Ridgeworks exists.</p>
   </div>
 
   <div class="founder-grid">
@@ -1190,7 +1195,7 @@
       <div class="founder-avatar">CR</div>
       <div class="founder-role">Partner</div>
       <h3>Cody Ridge</h3>
-      <p>Cody's background is architecture coordination, owner's representation, and design management — work built around catching problems before they cost anyone money. Ridgeworks Construction runs on that same discipline: custom builds, remodels, additions, and whole-home projects for Central Indiana homeowners, every job planned before the first shovel moves. Faith, family, and craftsmanship aren't slogans here. They're how the jobs get run.</p>
+      <p>Cody's background is architecture coordination, owner's representation, and design management — work built around catching problems before they cost anyone money. Ridgeworks Construction runs on that same discipline: every custom build, remodel, addition, and whole-home project planned before the first shovel moves. Faith, family, and craftsmanship aren't slogans here. They're how the jobs get run.</p>
     </div>
     <div class="founder-card">
       <div class="founder-avatar">BL</div>
@@ -1321,7 +1326,6 @@
     <blockquote>
       "The plan's already set.<br/>The decisions are made.<br/>We've <em>run this job once already</em><br/>on paper, before we touch it."
     </blockquote>
-    <div class="statement-attr">Cody Ridge · Ridgeworks Construction · Central Indiana</div>
   </div>
 </section>
 
