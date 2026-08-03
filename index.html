@@ -250,12 +250,34 @@
 
   .hero-sub strong { color: var(--white); font-weight: 500; }
 
-  .hero-logo {
+  .hero-wordmark { margin-bottom: 48px; }
+
+  .hero-wordmark-name {
     display: block;
-    max-width: 560px; width: 100%; height: auto;
-    margin-bottom: 48px;
-    border-radius: 3px;
-    box-shadow: 0 24px 64px rgba(0,0,0,0.45);
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(44px, 6.5vw, 88px);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .hero-wordmark-rule {
+    display: block;
+    width: 100%; max-width: 480px;
+    height: 2px;
+    background: var(--gold);
+    margin: 20px 0;
+  }
+
+  .hero-wordmark-sub {
+    display: block;
+    font-size: clamp(13px, 1.6vw, 20px);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
   }
 
   .hero-actions {
@@ -1106,7 +1128,8 @@
     .nav-links li:last-child a { border-bottom: none; }
     .nav-links .nav-cta { text-align: center; margin-top: 12px; }
     .hero { padding: 0 24px 64px; }
-    .hero-logo { max-width: 320px; margin-bottom: 32px; }
+    .hero-wordmark { margin-bottom: 32px; }
+    .hero-wordmark-rule { max-width: 220px; margin: 14px 0; }
     .offerings, .how, .deliverables, .statement, .services, .about, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
     .offerings-grid, .how-header, .deliverables-header { grid-template-columns: 1fr; gap: 40px; }
@@ -1154,7 +1177,11 @@
 
   <div class="hero-content">
     <div class="hero-eyebrow fade-up delay-1">Central Indiana · Est. 2026</div>
-    <img src="og-image.jpg" alt="Ridgeworks Construction — Project Coordination & Execution" class="hero-logo fade-up delay-2" />
+    <div class="hero-wordmark fade-up delay-2">
+      <span class="hero-wordmark-name">Ridgeworks</span>
+      <span class="hero-wordmark-rule"></span>
+      <span class="hero-wordmark-sub">Project Coordination &amp; Execution</span>
+    </div>
     <div class="hero-actions fade-up delay-4">
       <a href="#contact" class="btn-primary">Start Your Project</a>
       <a href="#how" class="btn-ghost">See How We Work</a>
