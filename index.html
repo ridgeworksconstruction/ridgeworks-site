@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ridgeworks Construction · Project Coordination & Execution | Central Indiana</title>
-<meta name="description" content="Ridgeworks Construction runs your remodel or build like a professional job — sequenced, documented, and closed out right. Central Indiana. 317.954.9394." />
+<meta name="description" content="Ridgeworks Construction handles remodels, additions, outdoor living spaces, and custom builds across Central Indiana — planned carefully and run right, start to finish. 317.954.9394." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://ridgeworksconstruction.com/" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
@@ -15,7 +15,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Ridgeworks Construction" />
 <meta property="og:title" content="Ridgeworks Construction · Project Coordination & Execution" />
-<meta property="og:description" content="We show up with the job already sequenced. Pre-construction planning, trade sequencing, and documentation on every project. Central Indiana." />
+<meta property="og:description" content="Remodels, additions, outdoor living spaces, and custom builds — planned and run right, start to finish. Central Indiana." />
 <meta property="og:url" content="https://ridgeworksconstruction.com/" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:image" content="https://ridgeworksconstruction.com/og-image.jpg" />
@@ -26,7 +26,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ridgeworks Construction · Project Coordination & Execution" />
-<meta name="twitter:description" content="We show up with the job already sequenced. Central Indiana. 317.954.9394." />
+<meta name="twitter:description" content="Remodels, additions, and custom builds across Central Indiana — planned and run right. 317.954.9394." />
 <meta name="twitter:image" content="https://ridgeworksconstruction.com/og-image.jpg" />
 
 <!-- Local business structured data -->
@@ -35,7 +35,7 @@
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
   "name": "Ridgeworks Construction",
-  "description": "Project coordination and execution for residential remodels, additions, and renovations. Pre-construction planning, trade sequencing, and documented closeout on every job.",
+  "description": "Remodels, additions, outdoor living spaces, and custom builds for Central Indiana homeowners — planned carefully and run right, start to finish.",
   "telephone": "+1-317-954-9394",
   "email": "cody@ridgeworksconstruction.com",
   "url": "https://ridgeworksconstruction.com/",
@@ -250,6 +250,14 @@
 
   .hero-sub strong { color: var(--white); font-weight: 500; }
 
+  .hero-logo {
+    display: block;
+    max-width: 560px; width: 100%; height: auto;
+    margin-bottom: 48px;
+    border-radius: 3px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.45);
+  }
+
   .hero-actions {
     display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
   }
@@ -301,8 +309,8 @@
     opacity: 0.4;
   }
 
-  /* ── PROBLEM SECTION ── */
-  .problem {
+  /* ── WHAT WE DO (OFFERINGS) SECTION ── */
+  .offerings {
     background: var(--paper);
     padding: 120px 48px;
   }
@@ -318,12 +326,12 @@
   .cta-section .section-label { color: var(--gold-light); }
   .cta-section .section-label::before { background: var(--gold-light); }
 
-  .problem-grid {
+  .offerings-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
     max-width: 1100px; margin: 0 auto;
   }
 
-  .problem-left h2 {
+  .offerings-left h2 {
     font-family: 'DM Serif Display', serif;
     font-size: clamp(32px, 4vw, 52px);
     line-height: 1.15;
@@ -331,33 +339,33 @@
     margin-bottom: 24px;
   }
 
-  .problem-left h2 em {
+  .offerings-left h2 em {
     font-style: italic; color: var(--gold-deep);
   }
 
-  .problem-left p {
+  .offerings-left p {
     font-size: 16px; color: var(--ink-soft); line-height: 1.8;
     font-weight: 300;
   }
 
-  .problem-right {
+  .offerings-right {
     display: flex; flex-direction: column; gap: 0;
     border-left: 1px solid rgba(184,150,46,0.35);
     padding-left: 48px;
   }
 
-  .pain-item {
+  .offer-item {
     padding: 28px 0;
     border-bottom: 1px solid rgba(28,25,18,0.08);
   }
-  .pain-item:last-child { border-bottom: none; }
+  .offer-item:last-child { border-bottom: none; }
 
-  .pain-item-label {
+  .offer-item-label {
     font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
     color: var(--gold-deep); margin-bottom: 8px;
   }
 
-  .pain-item-text {
+  .offer-item-text {
     font-size: 15px; color: var(--ink-soft); line-height: 1.6;
   }
 
@@ -714,7 +722,7 @@
   }
 
   .service-row {
-    display: grid; grid-template-columns: 240px 1fr auto;
+    display: grid; grid-template-columns: 240px 1fr;
     align-items: center; gap: 40px;
     padding: 32px 0;
     border-bottom: 1px solid rgba(28,25,18,0.1);
@@ -729,13 +737,6 @@
 
   .service-desc {
     font-size: 14px; color: var(--ink-soft); line-height: 1.6; font-weight: 300;
-  }
-
-  .service-tag {
-    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
-    color: var(--gold-deep); white-space: nowrap;
-    padding: 6px 12px; border: 1px solid rgba(184,150,46,0.4);
-    border-radius: 2px;
   }
 
   /* ── FEATURED PROJECT ── */
@@ -1105,16 +1106,16 @@
     .nav-links li:last-child a { border-bottom: none; }
     .nav-links .nav-cta { text-align: center; margin-top: 12px; }
     .hero { padding: 0 24px 64px; }
-    .problem, .how, .deliverables, .statement, .services, .about, .capabilities, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
+    .hero-logo { max-width: 320px; margin-bottom: 32px; }
+    .offerings, .how, .deliverables, .statement, .services, .about, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
-    .problem-grid, .how-header, .deliverables-header { grid-template-columns: 1fr; gap: 40px; }
-    .problem-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,150,46,0.2); padding-top: 40px; }
+    .offerings-grid, .how-header, .deliverables-header { grid-template-columns: 1fr; gap: 40px; }
+    .offerings-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,150,46,0.2); padding-top: 40px; }
     .how-steps, .doc-grid, .project-grid, .capability-grid { grid-template-columns: 1fr; }
     .process-grid { grid-template-columns: 1fr 1fr; }
     .featured-hero { aspect-ratio: 4 / 3; }
     .founder-grid { grid-template-columns: 1fr; }
     .service-row { grid-template-columns: 1fr; gap: 12px; }
-    .service-tag { display: none; }
     .footer-links { display: none; }
     .form-row { grid-template-columns: 1fr; gap: 0; }
   }
@@ -1135,7 +1136,7 @@
     </button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#capabilities">What We Do</a></li>
+      <li><a href="#offerings">What We Do</a></li>
       <li><a href="#how">How We Work</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#featured-project">Featured Project</a></li>
@@ -1153,13 +1154,7 @@
 
   <div class="hero-content">
     <div class="hero-eyebrow fade-up delay-1">Central Indiana · Est. 2026</div>
-    <h1 class="hero-headline fade-up delay-2">
-      You've been waiting<br/>for someone who<br/><em>runs jobs right.</em>
-    </h1>
-    <p class="hero-sub fade-up delay-3">
-      Most contractors show up and figure it out.<br/>
-      <strong>We show up with the job already sequenced.</strong>
-    </p>
+    <img src="og-image.jpg" alt="Ridgeworks Construction — Project Coordination & Execution" class="hero-logo fade-up delay-2" />
     <div class="hero-actions fade-up delay-4">
       <a href="#contact" class="btn-primary">Start Your Project</a>
       <a href="#how" class="btn-ghost">See How We Work</a>
@@ -1171,34 +1166,34 @@
 
 <div class="gold-rule"></div>
 
-<!-- PROBLEM -->
-<section class="problem">
-  <div class="problem-grid">
-    <div class="problem-left">
-      <div class="section-label">The Problem</div>
-      <h2>Other contractors<br/>run your job like<br/>it's their <em>first one.</em></h2>
+<!-- WHAT WE DO -->
+<section class="offerings" id="offerings">
+  <div class="offerings-grid">
+    <div class="offerings-left">
+      <div class="section-label">What We Do</div>
+      <h2>Remodels, additions,<br/>and custom builds —<br/>run <em>the right way.</em></h2>
       <p style="margin-top: 24px;">
-        Missed inspections. Subs showing up before the framing is done. Decisions that should have been made in week one getting made in week three — when it's too late and it costs you money.
+        Bathrooms, kitchens, basements, additions, outdoor living spaces, whole-home renovations, and custom builds — every project planned and run by the same two people, from the first conversation to the final walkthrough.
         <br/><br/>
-        That's not a contractor problem. That's a coordination problem. And it's fixable.
+        No job's too small to get the same care as the big ones.
       </p>
     </div>
-    <div class="problem-right">
-      <div class="pain-item">
-        <div class="pain-item-label">Problem 01</div>
-        <div class="pain-item-text">Trades showing up out of sequence because nobody mapped the job before work started.</div>
+    <div class="offerings-right">
+      <div class="offer-item">
+        <div class="offer-item-label">Remodels &amp; Renovations</div>
+        <div class="offer-item-text">Bathrooms, kitchens, and basements — full coordination from layout to final walkthrough.</div>
       </div>
-      <div class="pain-item">
-        <div class="pain-item-label">Problem 02</div>
-        <div class="pain-item-text">Client decisions made mid-project. Drain locations. Equipment selections. Blocking. Things that can't move after drywall closes.</div>
+      <div class="offer-item">
+        <div class="offer-item-label">Additions &amp; Whole-Home Projects</div>
+        <div class="offer-item-text">Room additions and whole-home renovations, planned out before the first wall comes down.</div>
       </div>
-      <div class="pain-item">
-        <div class="pain-item-label">Problem 03</div>
-        <div class="pain-item-text">No documentation. No phase gates. No accountability. Just a text thread and a gut feeling that something's about to go wrong.</div>
+      <div class="offer-item">
+        <div class="offer-item-label">Outdoor Living Spaces</div>
+        <div class="offer-item-text">Patios, outdoor kitchens, and custom hardscapes — designed and built start to finish.</div>
       </div>
-      <div class="pain-item">
-        <div class="pain-item-label">Problem 04</div>
-        <div class="pain-item-text">Scope creep with no change order. Work done without written authorization. Margin disappears and nobody knows where it went.</div>
+      <div class="offer-item">
+        <div class="offer-item-label">Custom Builds</div>
+        <div class="offer-item-text">Have a vision but no drawings yet? We'll help shape it and build it.</div>
       </div>
     </div>
   </div>
@@ -1219,7 +1214,7 @@
       <div class="founder-avatar">CR</div>
       <div class="founder-role">Partner</div>
       <h3>Cody Ridge</h3>
-      <p>Cody's background is architecture coordination, owner's representation, and design management — work built around catching problems before they cost anyone money. He's spent his career at the intersection of developers, architects, engineers, and builders. Ridgeworks Construction runs on that same discipline: custom builds, remodels, additions, and whole-home projects for Central Indiana homeowners, plus coordination work for developers and project teams who need the same precision at a larger scale. Every job planned before the first shovel moves. Faith, family, and craftsmanship aren't slogans here. They're how the jobs get run.</p>
+      <p>Cody's background is architecture coordination, owner's representation, and design management — work built around catching problems before they cost anyone money. Ridgeworks Construction runs on that same discipline: custom builds, remodels, additions, and whole-home projects for Central Indiana homeowners, every job planned before the first shovel moves. Faith, family, and craftsmanship aren't slogans here. They're how the jobs get run.</p>
     </div>
     <div class="founder-card">
       <div class="founder-avatar">BL</div>
@@ -1232,67 +1227,15 @@
 
 <div class="gold-rule"></div>
 
-<!-- CAPABILITIES -->
-<section class="capabilities" id="capabilities">
-  <div class="capabilities-inner">
-    <div class="capabilities-header">
-      <div class="section-label" style="justify-content: center;">What We Do</div>
-      <h2>One standard,<br/>applied at <em>every scale.</em></h2>
-      <p>The same coordination discipline runs through every job — whether that's a remodel we're running today or a full development we're ready to run when the call comes in.</p>
-    </div>
-
-    <div class="capability-tier">
-      <div class="capability-tier-label">Right Now</div>
-      <div class="capability-grid">
-        <div class="capability-card">
-          <h3>Remodels &amp; Renovations</h3>
-          <p>Hands-on coordination and execution, design through closeout, on every job we run.</p>
-        </div>
-        <div class="capability-card">
-          <h3>Design Coordination</h3>
-          <p>Sketch-stage design work, coordinated so what's drawn is what actually gets built.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="capability-tier">
-      <div class="capability-tier-label">When It's Called For</div>
-      <div class="capability-grid">
-        <div class="capability-card">
-          <h3>Pre-Construction &amp; Due Diligence</h3>
-          <p>Site analysis and feasibility work done before a decision gets made — not after.</p>
-        </div>
-        <div class="capability-card">
-          <h3>Budget &amp; Proposal Review</h3>
-          <p>Got a proposal in hand? We'll check the scope and pricing before you sign — whether it's a remodel bid or a proposal on a much bigger build.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="capability-segments">
-      <span>Residential</span>
-      <span>Multifamily</span>
-      <span>Mixed-Use</span>
-      <span>Build-to-Suit</span>
-    </div>
-
-    <div class="capability-contact">
-      Working on something larger in scope? <a href="tel:3179549394">Call</a> or <a href="mailto:cody@ridgeworksconstruction.com">email</a> directly — no form needed.
-    </div>
-  </div>
-</section>
-
-<div class="gold-rule"></div>
-
 <!-- HOW WE WORK -->
 <section class="how" id="how">
   <div class="how-header">
     <div>
       <div class="section-label">How We Work</div>
-      <h2>Every job is<br/><em>sequenced before</em><br/>we touch it.</h2>
+      <h2>Every job is<br/><em>planned</em><br/>before we touch it.</h2>
     </div>
     <p>
-      Before a tool hits the site, we've mapped the execution sequence, locked the trade schedule, and confirmed every client decision that can't wait until later. This isn't project management theory. It's the way professional jobs actually get run.
+      Before a tool ever hits your house, we've mapped out the order of work, lined up the right people at the right time, and nailed down every decision that can't wait until later. That's just how we run every job — no exceptions.
     </p>
   </div>
 
@@ -1301,43 +1244,43 @@
       <div class="step-number">01</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M9 4.5h6a1 1 0 011 1V6h1.5A1.5 1.5 0 0119 7.5v12A1.5 1.5 0 0117.5 21h-11A1.5 1.5 0 015 19.5v-12A1.5 1.5 0 016.5 6H8v-.5a1 1 0 011-1z"/><rect x="9" y="3.5" width="6" height="3" rx="0.8"/><path d="M8.5 12h7M8.5 15.5h7M8.5 19h4.5"/></svg></div>
       <h3>Pre-Construction Planning</h3>
-      <p>We build your Project Execution Plan before Day 1. Scope, sequence, crew assignments, and critical notes — locked in writing before anyone mobilizes.</p>
-      <div class="step-tag">Phase Gate: Nothing moves without a plan</div>
+      <p>We walk the job, map out the plan, and put it in writing before Day 1 — what's getting done, in what order, and who's doing it.</p>
+      <div class="step-tag">Nothing starts without a plan</div>
     </div>
     <div class="step">
       <div class="step-number">02</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M4 12h11"/><path d="M11 7l5 5-5 5"/><path d="M15 7l5 5-5 5"/></svg></div>
-      <h3>Trade Sequencing</h3>
-      <p>Framing before plumbing. MEP inspection before air seal. The sequence is intentional and field-tested. We don't compress the buffer and we don't improvise the order.</p>
-      <div class="step-tag">Phase Gate: Inspection cleared before proceeding</div>
+      <h3>Work in the Right Order</h3>
+      <p>Framing before plumbing. Inspections before we close anything up. Every step happens in the order it's supposed to — we don't skip ahead and we don't guess.</p>
+      <div class="step-tag">Inspections cleared before we move on</div>
     </div>
     <div class="step">
       <div class="step-number">03</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><rect x="6" y="10.5" width="12" height="9" rx="1.5"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/><circle cx="12" cy="14.5" r="1.3"/><path d="M12 15.8v1.7"/></svg></div>
       <h3>Client Decisions Locked Early</h3>
-      <p>Water heater. Valve brand. Equipment dimensions. Every decision that affects rough-in gets locked before the trade that needs it ever shows up on site.</p>
-      <div class="step-tag">Phase Gate: Decisions locked before trades mobilize</div>
+      <p>Fixture picks, finishes, equipment — anything that affects the work behind the walls gets decided early, before the crew that needs that answer ever shows up.</p>
+      <div class="step-tag">Decisions made early, not mid-project</div>
     </div>
     <div class="step">
       <div class="step-number">04</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M4 8.5A1.5 1.5 0 015.5 7H8l1-2h6l1 2h2.5A1.5 1.5 0 0120 8.5v9A1.5 1.5 0 0118.5 19h-13A1.5 1.5 0 014 17.5v-9z"/><circle cx="12" cy="12.5" r="3.3"/></svg></div>
       <h3>Documentation at Every Phase</h3>
-      <p>Rough-ins photographed before close-in. Change orders in writing before execution. Punch list signed before final payment is collected. Every time.</p>
-      <div class="step-tag">Phase Gate: Photo documentation before cover</div>
+      <p>Everything gets photographed before walls close up. Any change to the plan goes in writing before we act on it. Nothing's left to memory.</p>
+      <div class="step-tag">Photographed before it's covered up</div>
     </div>
     <div class="step">
       <div class="step-number">05</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M12 3.5l6.5 2.5v5.2c0 4.4-2.8 7.9-6.5 9.3-3.7-1.4-6.5-4.9-6.5-9.3V6l6.5-2.5z"/><path d="M9 12.2l2 2 4-4.4"/></svg></div>
       <h3>Built-In Buffer. Always.</h3>
-      <p>We build contingency into every schedule. Inspection delays, material lead times, unforeseen conditions — none of it is a surprise because we planned for it.</p>
-      <div class="step-tag">Phase Gate: Buffer never compressed</div>
+      <p>Every schedule has room built in. Inspection delays, material lead times, surprises behind the walls — we plan for it, so it doesn't throw off your whole project.</p>
+      <div class="step-tag">We don't cut the buffer to save time</div>
     </div>
     <div class="step">
       <div class="step-number">06</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8.3 12.3l2.5 2.5 5-5.4"/></svg></div>
       <h3>Closeout That Closes</h3>
-      <p>Final walkthrough. Punch list complete. Client signs off. Final payment collected. The job isn't done until it's actually done — documented and closed.</p>
-      <div class="step-tag">Phase Gate: Sign-off before final payment</div>
+      <p>A final walkthrough, a finished punch list, and your sign-off. The job isn't done until you say it's done.</p>
+      <div class="step-tag">You sign off before we call it done</div>
     </div>
   </div>
 </section>
@@ -1350,45 +1293,45 @@
     <div class="deliverables-header">
       <div>
         <div class="section-label">What You Get</div>
-        <h2>A complete package.<br/><em>Every project.</em><br/>No exceptions.</h2>
+        <h2>You'll always know<br/><em>what's happening</em><br/>and when.</h2>
       </div>
       <p>
-        Every Ridgeworks project comes with professional documentation built for that specific job. Not templates filled in with your name. A real execution package built on your project, your trades, your decisions.
+        Every project comes with real documentation built around your job — not a generic template with your name swapped in. You'll know the plan, the schedule, and what's expected of you, in writing.
       </p>
     </div>
 
     <div class="doc-grid">
       <div class="doc-card">
         <div class="doc-card-icon">📄</div>
-        <h3>Project Execution Plan</h3>
-        <p>Phase-by-phase execution sequence with scope, days, crew assignments, and critical notes specific to your job.</p>
+        <h3>Your Project Plan</h3>
+        <p>A clear, written plan for your job — what's happening, in what order, and who's doing it.</p>
         <ul>
-          <li>Full execution sequence with critical notes</li>
-          <li>Crew assignments per scope</li>
-          <li>Buffer and contingency documented</li>
-          <li>Authorization block for client sign-off</li>
+          <li>Step-by-step order of work</li>
+          <li>Who's on site and when</li>
+          <li>Extra time planned in, not squeezed out</li>
+          <li>You sign off before we start</li>
         </ul>
       </div>
       <div class="doc-card">
         <div class="doc-card-icon">📅</div>
-        <h3>Weekly Trade Schedule</h3>
-        <p>Color-coded weekly view showing exactly which trade is on site which day — and what they need to know before they arrive.</p>
+        <h3>Weekly Schedule</h3>
+        <p>A simple weekly view of who's working on your project and when, so you're never guessing who's showing up.</p>
         <ul>
-          <li>Day-by-day trade sequencing</li>
-          <li>Color-coded by trade type</li>
-          <li>Built-in buffer week</li>
-          <li>Field notes per trade per day</li>
+          <li>Day-by-day view of the work</li>
+          <li>Easy to read at a glance</li>
+          <li>Built-in cushion for delays</li>
+          <li>Notes on what to expect each day</li>
         </ul>
       </div>
       <div class="doc-card">
         <div class="doc-card-icon">✅</div>
-        <h3>Client Decision Tracker</h3>
-        <p>Every decision that affects your rough-in, organized by system, with a clear deadline tied to a phase gate.</p>
+        <h3>Decision Tracker</h3>
+        <p>Every decision you need to make, organized clearly, with a deadline so nothing gets decided too late to matter.</p>
         <ul>
-          <li>Decisions organized by system</li>
-          <li>LOCKED / PENDING / HOLD status</li>
-          <li>Phase gate deadlines per decision</li>
-          <li>Notes column for client responses</li>
+          <li>Organized by room or system</li>
+          <li>Clear status on every decision</li>
+          <li>Deadlines that actually matter</li>
+          <li>Room for your notes and answers</li>
         </ul>
       </div>
     </div>
@@ -1400,7 +1343,7 @@
   <div class="statement-inner">
     <div class="section-label" style="justify-content: center; margin-bottom: 40px;">The Standard</div>
     <blockquote>
-      "The sequence is intentional.<br/>The decisions are locked.<br/>The job is <em>already run</em><br/>before we start."
+      "The plan's already set.<br/>The decisions are made.<br/>We've <em>run this job once already</em><br/>on paper, before we touch it."
     </blockquote>
     <div class="statement-attr">Cody Ridge · Ridgeworks Construction · Central Indiana</div>
   </div>
@@ -1419,33 +1362,31 @@
     <div class="service-list">
       <div class="service-row">
         <div class="service-name">Bathroom Remodels</div>
-        <div class="service-desc">Full rough-in coordination, trade sequencing, and client decision management from layout lock to punch list closeout.</div>
-        <div class="service-tag">Full Execution Package</div>
+        <div class="service-desc">From layout to finishes, planned and coordinated so nothing gets missed behind the walls.</div>
       </div>
       <div class="service-row">
         <div class="service-name">Kitchen Remodels</div>
-        <div class="service-desc">Cabinet layout locked before rough-in. Appliance specs confirmed before electrical. Sequence coordinated across all trades.</div>
-        <div class="service-tag">Full Execution Package</div>
+        <div class="service-desc">Layout and appliance decisions locked in early, so plumbing and electrical go in right the first time.</div>
       </div>
       <div class="service-row">
         <div class="service-name">Basement Finishes</div>
-        <div class="service-desc">Egress, mechanical, electrical, and framing sequenced properly. No rework. No surprises at inspection.</div>
-        <div class="service-tag">Full Execution Package</div>
+        <div class="service-desc">Framing, electrical, and mechanical done in the right order — no rework, no surprises at inspection.</div>
       </div>
       <div class="service-row">
         <div class="service-name">Room Additions</div>
-        <div class="service-desc">Structural, envelope, mechanical integration — all coordinated in sequence before the first nail goes in.</div>
-        <div class="service-tag">Full Execution Package</div>
+        <div class="service-desc">Structure, exterior, and mechanicals all planned together before the first nail goes in.</div>
       </div>
       <div class="service-row">
         <div class="service-name">Whole Home Renovations</div>
-        <div class="service-desc">Multi-phase coordination with phase gates, documented client decisions, and a schedule that accounts for what we don't know yet.</div>
-        <div class="service-tag">Multi-Phase Package</div>
+        <div class="service-desc">Multiple phases, one plan — decisions documented and a schedule that leaves room for the unexpected.</div>
       </div>
       <div class="service-row">
-        <div class="service-name">Custom & Commercial</div>
-        <div class="service-desc">If it needs to be coordinated and executed at a high level, we run it. Call us with what you've got.</div>
-        <div class="service-tag">Call for Scope</div>
+        <div class="service-name">Custom Builds</div>
+        <div class="service-desc">Have something in mind that doesn't fit a category above? Call us — we'll figure out how to run it.</div>
+      </div>
+      <div class="service-row">
+        <div class="service-name">Bid &amp; Proposal Review</div>
+        <div class="service-desc">Already got a proposal from someone else? We'll look over the scope and pricing before you sign.</div>
       </div>
     </div>
   </div>
@@ -1549,7 +1490,7 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
         </div>
         <div class="project-info">
           <h3>Bathroom Remodel</h3>
-          <p>Brownsburg — full rough-in coordination and phase-gated closeout, built to client-selected finishes throughout.</p>
+          <p>Brownsburg — full rough-in coordination and closeout, built to client-selected finishes throughout.</p>
         </div>
       </div>
       <a class="project-card" href="#featured-project">
@@ -1574,7 +1515,7 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
   <div class="cta-inner">
     <div class="section-label" style="justify-content: center; margin-bottom: 32px;">Ready to Start</div>
     <h2>Let's run your<br/>job <em>right.</em></h2>
-    <p>Tell us what you've got. We'll tell you exactly how we'd execute it — before we ever shake hands.</p>
+    <p>Tell us what you're thinking about. We'll walk you through exactly how we'd run it — before we ever shake hands.</p>
 
     <!-- Lead capture form — posts to Formspree. Replace YOUR_FORM_ID with your real endpoint. -->
     <form class="lead-form" id="leadForm" action="https://formspree.io/f/xgoglgyr" method="POST">
@@ -1601,7 +1542,7 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
           <option>Basement Finish</option>
           <option>Room Addition</option>
           <option>Whole Home Renovation</option>
-          <option>Custom / Commercial</option>
+          <option>Custom Build</option>
         </select>
       </div>
       <div class="form-field">
