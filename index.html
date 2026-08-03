@@ -188,41 +188,21 @@
 
   .hero-bg {
     position: absolute; inset: 0;
-    background:
-      linear-gradient(to bottom, rgba(13,13,13,0.78) 0%, rgba(13,13,13,0.90) 70%, var(--black) 100%),
-      url('hero-blueprint.jpg');
+    background: url('og-image.jpg');
     background-size: cover;
-    background-position: center center;
-    background-color: var(--off-black);
-  }
-
-  /* Structural accent — a single diagonal beam of light */
-  .hero-beam {
-    position: absolute;
-    top: -20%; right: 10%;
-    width: 1px; height: 140%;
-    background: linear-gradient(to bottom, transparent, rgba(184,150,46,0.4), transparent);
-    transform: rotate(12deg);
-    pointer-events: none;
-  }
-  .hero-beam-2 {
-    position: absolute;
-    top: -20%; right: 15%;
-    width: 1px; height: 140%;
-    background: linear-gradient(to bottom, transparent, rgba(184,150,46,0.15), transparent);
-    transform: rotate(12deg);
-    pointer-events: none;
+    background-position: 78% 52%;
+    background-color: var(--paper);
   }
 
   .hero-content { position: relative; z-index: 1; max-width: 900px; }
 
   .hero-eyebrow {
     font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 24px;
+    color: var(--gold-deep); margin-bottom: 24px;
     display: flex; align-items: center; gap: 16px;
   }
   .hero-eyebrow::before {
-    content: ''; display: block; width: 40px; height: 1px; background: var(--gold);
+    content: ''; display: block; width: 40px; height: 1px; background: var(--gold-deep);
   }
 
   .hero-headline {
@@ -249,36 +229,6 @@
   }
 
   .hero-sub strong { color: var(--white); font-weight: 500; }
-
-  .hero-wordmark { margin-bottom: 48px; }
-
-  .hero-wordmark-name {
-    display: block;
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
-    font-size: clamp(44px, 6.5vw, 88px);
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    color: var(--white);
-    line-height: 1;
-  }
-
-  .hero-wordmark-rule {
-    display: block;
-    width: 100%; max-width: 480px;
-    height: 2px;
-    background: var(--gold);
-    margin: 20px 0;
-  }
-
-  .hero-wordmark-sub {
-    display: block;
-    font-size: clamp(13px, 1.6vw, 20px);
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 600;
-  }
 
   .hero-actions {
     display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
@@ -312,16 +262,23 @@
   }
   .btn-ghost:hover { border-color: var(--white); }
 
+  /* Hero sits on a light background image — override the dark-theme defaults above */
+  .hero .btn-ghost {
+    color: var(--ink);
+    border-color: rgba(28,25,18,0.3);
+  }
+  .hero .btn-ghost:hover { border-color: var(--ink); }
+
   .hero-scroll {
     position: absolute; bottom: 32px; right: 48px;
     font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
-    color: var(--mgray);
+    color: var(--ink-soft);
     display: flex; flex-direction: column; align-items: center; gap: 10px;
     writing-mode: vertical-rl;
   }
   .hero-scroll::after {
     content: ''; display: block; width: 1px; height: 48px;
-    background: linear-gradient(to bottom, var(--mgray), transparent);
+    background: linear-gradient(to bottom, var(--ink-soft), transparent);
   }
 
   /* ── DIVIDER ── */
@@ -1128,8 +1085,7 @@
     .nav-links li:last-child a { border-bottom: none; }
     .nav-links .nav-cta { text-align: center; margin-top: 12px; }
     .hero { padding: 0 24px 64px; }
-    .hero-wordmark { margin-bottom: 32px; }
-    .hero-wordmark-rule { max-width: 220px; margin: 14px 0; }
+    .hero-bg { background-position: 65% 50%; }
     .offerings, .how, .deliverables, .statement, .services, .about, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
     .offerings-grid, .how-header, .deliverables-header { grid-template-columns: 1fr; gap: 40px; }
@@ -1172,16 +1128,9 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-beam"></div>
-  <div class="hero-beam-2"></div>
 
   <div class="hero-content">
     <div class="hero-eyebrow fade-up delay-1">Central Indiana · Est. 2026</div>
-    <div class="hero-wordmark fade-up delay-2">
-      <span class="hero-wordmark-name">Ridgeworks</span>
-      <span class="hero-wordmark-rule"></span>
-      <span class="hero-wordmark-sub">Project Coordination &amp; Execution</span>
-    </div>
     <div class="hero-actions fade-up delay-4">
       <a href="#contact" class="btn-primary">Start Your Project</a>
       <a href="#how" class="btn-ghost">See How We Work</a>
