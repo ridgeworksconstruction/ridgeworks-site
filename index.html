@@ -470,65 +470,29 @@
     padding-top: 12px;
   }
 
-  /* ── WHAT YOU GET ── */
-  .deliverables {
+  /* ── DECISION TRACKER BANNER ── */
+  .decision-banner {
     background: var(--paper);
-    padding: 120px 48px;
+    padding: 80px 48px;
   }
 
-  .deliverables-inner { max-width: 1100px; margin: 0 auto; }
-
-  .deliverables-header {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
-    align-items: end; margin-bottom: 80px;
-  }
-
-  .deliverables-header h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(32px, 4vw, 52px);
-    line-height: 1.15; color: var(--ink);
-  }
-  .deliverables-header h2 em { font-style: italic; color: var(--gold-deep); }
-
-  .deliverables-header p {
-    font-size: 15px; color: var(--ink-soft); line-height: 1.8; font-weight: 300;
-  }
-
-  .doc-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
-  }
-
-  .doc-card {
+  .decision-banner-inner {
+    max-width: 700px; margin: 0 auto; text-align: center;
     background: var(--paper-card);
-    padding: 40px 36px;
-    border-top: 2px solid transparent;
-    transition: border-color 0.3s;
-  }
-  .doc-card:hover { border-top-color: var(--gold); }
-
-  .doc-card-icon {
-    font-size: 28px; margin-bottom: 20px;
+    border-top: 2px solid var(--gold);
+    padding: 48px 40px;
   }
 
-  .doc-card h3 {
-    font-size: 15px; font-weight: 700; color: var(--ink);
-    margin-bottom: 12px; letter-spacing: 0.3px;
+  .decision-banner-icon { font-size: 28px; margin-bottom: 20px; }
+
+  .decision-banner-text {
+    font-size: 17px; color: var(--ink); line-height: 1.7; font-weight: 300;
+    margin-bottom: 20px;
   }
 
-  .doc-card p {
-    font-size: 13px; color: var(--ink-soft); line-height: 1.7; font-weight: 300;
-  }
-
-  .doc-card ul {
-    list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 8px;
-  }
-
-  .doc-card ul li {
-    font-size: 12px; color: var(--ink-faint);
-    padding-left: 16px; position: relative; line-height: 1.5;
-  }
-  .doc-card ul li::before {
-    content: '→'; position: absolute; left: 0; color: var(--gold-deep); font-size: 10px;
+  .decision-banner-tag {
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold-deep); font-weight: 700;
   }
 
   /* ── STATEMENT ── */
@@ -1066,11 +1030,11 @@
       background-repeat: no-repeat;
     }
     .hero-scroll { display: none; }
-    .offerings, .how, .deliverables, .statement, .services, .about, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
+    .offerings, .how, .decision-banner, .statement, .services, .about, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
-    .offerings-grid, .how-header, .deliverables-header { grid-template-columns: 1fr; gap: 40px; }
+    .offerings-grid, .how-header { grid-template-columns: 1fr; gap: 40px; }
     .offerings-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,150,46,0.2); padding-top: 40px; }
-    .how-steps, .doc-grid, .project-grid, .capability-grid { grid-template-columns: 1fr; }
+    .how-steps, .project-grid, .capability-grid { grid-template-columns: 1fr; }
     .process-grid { grid-template-columns: 1fr 1fr; }
     .featured-hero { aspect-ratio: 4 / 3; }
     .founder-grid { grid-template-columns: 1fr; }
@@ -1228,8 +1192,8 @@
       <div class="step-number">05</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M12 3.5l6.5 2.5v5.2c0 4.4-2.8 7.9-6.5 9.3-3.7-1.4-6.5-4.9-6.5-9.3V6l6.5-2.5z"/><path d="M9 12.2l2 2 4-4.4"/></svg></div>
       <h3>Built-In Buffer. Always.</h3>
-      <p>Every schedule has room built in. Inspection delays, material lead times, surprises behind the walls — we plan for it, so it doesn't throw off your whole project.</p>
-      <div class="step-tag">We don't cut the buffer to save time</div>
+      <p>Every schedule has room built in from the start — so the timeline you're given at the beginning is the one we actually run to.</p>
+      <div class="step-tag">The schedule you're given is the schedule you get</div>
     </div>
     <div class="step">
       <div class="step-number">06</div>
@@ -1243,55 +1207,12 @@
 
 <div class="gold-rule"></div>
 
-<!-- DELIVERABLES -->
-<section class="deliverables" id="deliverables">
-  <div class="deliverables-inner">
-    <div class="deliverables-header">
-      <div>
-        <div class="section-label">What You Get</div>
-        <h2>You'll always know<br/><em>what's happening</em><br/>and when.</h2>
-      </div>
-      <p>
-        Every project comes with real documentation built around your job — not a generic template with your name swapped in. You'll know the plan, the schedule, and what's expected of you, in writing.
-      </p>
-    </div>
-
-    <div class="doc-grid">
-      <div class="doc-card">
-        <div class="doc-card-icon">📄</div>
-        <h3>Your Project Plan</h3>
-        <p>A clear, written plan for your job — what's happening, in what order, and who's doing it.</p>
-        <ul>
-          <li>Step-by-step order of work</li>
-          <li>Who's on site and when</li>
-          <li>Extra time planned in, not squeezed out</li>
-          <li>You sign off before we start</li>
-        </ul>
-      </div>
-      <div class="doc-card">
-        <div class="doc-card-icon">📅</div>
-        <h3>Weekly Schedule</h3>
-        <p>A simple weekly view of who's working on your project and when, so you're never guessing who's showing up.</p>
-        <ul>
-          <li>Day-by-day view of the work</li>
-          <li>Easy to read at a glance</li>
-          <li>Built-in cushion for delays</li>
-          <li>Notes on what to expect each day</li>
-        </ul>
-      </div>
-      <div class="doc-card">
-        <div class="doc-card-icon">✅</div>
-        <h3>Decision Tracker</h3>
-        <p>Every decision you need to make, organized clearly, with a deadline so nothing gets decided too late to matter.</p>
-        <ul>
-          <li>Organized by room or system</li>
-          <li>Options and trade-offs explained in plain language</li>
-          <li>Clear status on every decision</li>
-          <li>Deadlines that actually matter</li>
-          <li>Room for your notes and answers</li>
-        </ul>
-      </div>
-    </div>
+<!-- DECISION TRACKER -->
+<section class="decision-banner" id="deliverables">
+  <div class="decision-banner-inner">
+    <div class="decision-banner-icon">✅</div>
+    <p class="decision-banner-text">Every decision gets flagged before it becomes a problem — trim style, fixture finish, and the dozen other choices you didn't know were choices. Explained in plain language, with a deadline that keeps your job moving.</p>
+    <div class="decision-banner-tag">Included with every project — the Decision Tracker</div>
   </div>
 </section>
 
@@ -1356,7 +1277,7 @@
     <div class="featured-header">
       <div class="section-label">Featured Project</div>
       <h2>From a sketch on paper<br/>to a <em>finished</em> outdoor living space.</h2>
-      <p>Fully custom design and build — designed by Ridgeworks Construction, executed by Ridgeworks Construction. Full subcontractor coordination across slab, downspout tie-ins, and irrigation, sequenced start to finish under one plan.</p>
+      <p>A backyard that used to flood, turned into a fully custom outdoor living space — designed by Ridgeworks Construction, built by Ridgeworks Construction, start to finish under one plan.</p>
     </div>
 
     <div class="featured-hero">
@@ -1446,7 +1367,7 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
         </div>
         <div class="project-info">
           <h3>Bathroom Remodel</h3>
-          <p>Brownsburg — full rough-in coordination and closeout, built to client-selected finishes throughout.</p>
+          <p>Brownsburg — a dated bathroom turned into a space built entirely around what the client picked, finish by finish.</p>
         </div>
       </div>
       <a class="project-card" href="#featured-project">
