@@ -627,7 +627,7 @@
   }
 
   .service-row {
-    display: grid; grid-template-columns: 240px 1fr;
+    display: grid; grid-template-columns: 48px 240px 1fr;
     align-items: center; gap: 40px;
     padding: 32px 0;
     border-bottom: 1px solid rgba(28,25,18,0.1);
@@ -636,12 +636,37 @@
   }
   .service-row:hover { background: rgba(184,150,46,0.06); }
 
+  .service-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px; color: var(--gold-deep); line-height: 1;
+  }
+
   .service-name {
     font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: 0.3px;
   }
 
   .service-desc {
     font-size: 14px; color: var(--ink-soft); line-height: 1.6; font-weight: 300;
+  }
+
+  .service-referral {
+    display: flex; align-items: flex-start; gap: 16px;
+    margin-top: 32px;
+    padding: 28px 32px;
+    background: rgba(184,150,46,0.08);
+    border-left: 2px solid var(--gold);
+  }
+
+  .service-referral-arrow {
+    font-size: 20px; color: var(--gold-deep); line-height: 1.4;
+  }
+
+  .service-referral-title {
+    font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 4px;
+  }
+
+  .service-referral-text {
+    font-size: 14px; color: var(--ink-soft); font-weight: 300; line-height: 1.6;
   }
 
   /* ── FEATURED PROJECT ── */
@@ -1030,6 +1055,7 @@
     .featured-hero { aspect-ratio: 4 / 3; }
     .founder-grid { grid-template-columns: 1fr; }
     .service-row { grid-template-columns: 1fr; gap: 12px; }
+    .service-referral { flex-direction: column; gap: 8px; padding: 24px; }
     .footer-links { display: none; }
     .form-row { grid-template-columns: 1fr; gap: 0; }
   }
@@ -1206,37 +1232,52 @@
   <div class="services-inner">
     <div class="services-header">
       <div class="section-label">Services</div>
-      <h2>Whatever comes in,<br/>we run it right.</h2>
+      <h2>Here's everything<br/>we can help with.</h2>
     </div>
 
     <div class="service-list">
       <div class="service-row">
-        <div class="service-name">Bathroom Remodels</div>
-        <div class="service-desc">From layout to finishes, planned and coordinated so nothing gets missed behind the walls.</div>
+        <div class="service-num">01</div>
+        <div class="service-name">Bathrooms &amp; Kitchens</div>
+        <div class="service-desc">Full remodels, done right — not just the parts you can see.</div>
       </div>
       <div class="service-row">
-        <div class="service-name">Kitchen Remodels</div>
-        <div class="service-desc">Layout and appliance decisions locked in early, so plumbing and electrical go in right the first time.</div>
+        <div class="service-num">02</div>
+        <div class="service-name">Additions &amp; Whole-Home</div>
+        <div class="service-desc">More space, planned properly before anything gets torn out.</div>
       </div>
       <div class="service-row">
-        <div class="service-name">Basement Finishes</div>
-        <div class="service-desc">Framing, electrical, and mechanical done in the right order — no rework, no surprises at inspection.</div>
+        <div class="service-num">03</div>
+        <div class="service-name">Outdoor Living &amp; Kitchens</div>
+        <div class="service-desc">Patios, outdoor kitchens, real backyard experiences.</div>
       </div>
       <div class="service-row">
-        <div class="service-name">Room Additions</div>
-        <div class="service-desc">Structure, exterior, and mechanicals all planned together before the first nail goes in.</div>
+        <div class="service-num">04</div>
+        <div class="service-name">Custom Built-Ins &amp; Cabinetry</div>
+        <div class="service-desc">Hall trees, mudroom benches, built-in shelving — made for your space.</div>
       </div>
       <div class="service-row">
-        <div class="service-name">Whole Home Renovations</div>
-        <div class="service-desc">Multiple phases, one plan — decisions documented and a schedule that leaves room for the unexpected.</div>
+        <div class="service-num">05</div>
+        <div class="service-name">Custom Furnishings</div>
+        <div class="service-desc">Conference tables, bars, entertainment pieces — freestanding furniture built to order.</div>
       </div>
       <div class="service-row">
-        <div class="service-name">Custom Builds</div>
-        <div class="service-desc">Have something in mind that doesn't fit a category above? Call us — we'll figure out how to run it.</div>
+        <div class="service-num">06</div>
+        <div class="service-name">Handyman &amp; Small Repairs</div>
+        <div class="service-desc">A ceiling fan that's still in the box, a faucet that won't stop dripping, the stuff that's been bugging you for months — you don't need a remodel to call us.</div>
       </div>
       <div class="service-row">
-        <div class="service-name">Bid &amp; Proposal Review</div>
-        <div class="service-desc">Already got a proposal, or a project that's stalled with someone else? We'll walk it and give you an honest read on where it stands and what it'll take to get it right.</div>
+        <div class="service-num">07</div>
+        <div class="service-name">Want a Second Opinion?</div>
+        <div class="service-desc">If you've got questions about a project you're already planning and want someone in your corner to talk it through, just give us a call — happy to help.</div>
+      </div>
+    </div>
+
+    <div class="service-referral">
+      <span class="service-referral-arrow">↳</span>
+      <div>
+        <div class="service-referral-title">Know someone with a project — or a to-do list?</div>
+        <div class="service-referral-text">We'd genuinely appreciate the introduction — that's how this business grows.</div>
       </div>
     </div>
   </div>
