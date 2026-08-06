@@ -434,13 +434,6 @@
   }
   .step:hover { background: #FBF7EC; }
 
-  .step-number {
-    font-family: 'DM Serif Display', serif;
-    font-size: 72px; color: rgba(184,150,46,0.12);
-    line-height: 1; margin-bottom: 24px;
-    position: absolute; top: 24px; right: 32px;
-  }
-
   .step-icon {
     width: 40px; height: 40px; margin-bottom: 24px;
     border: 1px solid rgba(184,150,46,0.4);
@@ -482,8 +475,6 @@
     border-top: 2px solid var(--gold);
     padding: 48px 40px;
   }
-
-  .decision-banner-icon { font-size: 28px; margin-bottom: 20px; }
 
   .decision-banner-text {
     font-size: 17px; color: var(--ink); line-height: 1.7; font-weight: 300;
@@ -1030,7 +1021,7 @@
       background-repeat: no-repeat;
     }
     .hero-scroll { display: none; }
-    .offerings, .how, .decision-banner, .statement, .services, .about, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
+    .offerings, .how, .decision-banner, .services, .about, .reviews, .featured-project, .projects, .cta-section { padding: 80px 24px; }
     footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
     .offerings-grid, .how-header { grid-template-columns: 1fr; gap: 40px; }
     .offerings-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,150,46,0.2); padding-top: 40px; }
@@ -1115,7 +1106,7 @@
       </div>
       <div class="offer-item">
         <div class="offer-item-label">Additions &amp; Whole-Home Projects</div>
-        <div class="offer-item-text">Room additions and whole-home renovations, planned out before the first wall comes down.</div>
+        <div class="offer-item-text">Room additions and whole-home renovations, planned and coordinated from day one.</div>
       </div>
       <div class="offer-item">
         <div class="offer-item-label">Outdoor Living Spaces</div>
@@ -1142,14 +1133,12 @@
   <div class="founder-grid">
     <div class="founder-card">
       <div class="founder-avatar">CR</div>
-      <div class="founder-role">Partner</div>
       <h3>Cody Ridge</h3>
       <p>Cody's background is architecture coordination, owner's representation, and design management — the work of catching problems before they cost anyone money. He's spent his career at the intersection of developers, architects, engineers, and builders, turning design intent into buildable, budget-protected reality.</p>
       <p>That same discipline runs every job at Ridgeworks Construction: coordination gaps caught early, decisions locked before they get expensive, budgets protected from day one. Faith, family, and craftsmanship aren't slogans here. They're how the jobs get run.</p>
     </div>
     <div class="founder-card">
       <div class="founder-avatar">BL</div>
-      <div class="founder-role">Partner</div>
       <h3>Brandon Larrison</h3>
       <p>Brandon is the craftsman of Ridgeworks — years of hands-on experience across framing, finish carpentry, and job-site management before joining Ridgeworks full time. Custom millwork and woodworking are where his precision shows up clearest: work with zero room to fake it, which is the standard he holds every trade to, not just the one he's known for. Ask him something, and he's already doing it — that instinct is what makes the partnership work: two partners who plan and execute, together, on every job. Faith, family, and craftsmanship aren't slogans for him either. They're the standard every piece of trim, every joint, every job gets held to.</p>
     </div>
@@ -1172,42 +1161,30 @@
 
   <div class="how-steps">
     <div class="step">
-      <div class="step-number">01</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M9 4.5h6a1 1 0 011 1V6h1.5A1.5 1.5 0 0119 7.5v12A1.5 1.5 0 0117.5 21h-11A1.5 1.5 0 015 19.5v-12A1.5 1.5 0 016.5 6H8v-.5a1 1 0 011-1z"/><rect x="9" y="3.5" width="6" height="3" rx="0.8"/><path d="M8.5 12h7M8.5 15.5h7M8.5 19h4.5"/></svg></div>
       <h3>Pre-Construction Planning</h3>
       <p>We walk the job, map out the plan, and put it in writing before Day 1 — what's getting done, in what order, and who's doing it.</p>
       <div class="step-tag">Nothing starts without a plan</div>
     </div>
     <div class="step">
-      <div class="step-number">02</div>
-      <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M4 12h11"/><path d="M11 7l5 5-5 5"/><path d="M15 7l5 5-5 5"/></svg></div>
-      <h3>Work in the Right Order</h3>
-      <p>Every step happens in the order it's supposed to — framing before plumbing, inspections before we close anything up. No skipping ahead, no guessing, and nothing gets hidden behind a wall before it's been checked.</p>
-      <div class="step-tag">Inspections cleared before we move on</div>
-    </div>
-    <div class="step">
-      <div class="step-number">03</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><rect x="6" y="10.5" width="12" height="9" rx="1.5"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/><circle cx="12" cy="14.5" r="1.3"/><path d="M12 15.8v1.7"/></svg></div>
       <h3>Client Decisions Locked Early</h3>
       <p>Fixture picks, finishes, equipment — we walk you through the real trade-offs so you know what you're choosing, not just picking from a catalog. Decided early, before we're on-site and need the answer to keep moving.</p>
       <div class="step-tag">Informed decisions, made early</div>
     </div>
     <div class="step">
-      <div class="step-number">04</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M4 8.5A1.5 1.5 0 015.5 7H8l1-2h6l1 2h2.5A1.5 1.5 0 0120 8.5v9A1.5 1.5 0 0118.5 19h-13A1.5 1.5 0 014 17.5v-9z"/><circle cx="12" cy="12.5" r="3.3"/></svg></div>
       <h3>Documentation at Every Phase</h3>
       <p>Everything gets photographed before walls close up. Any change to the plan goes in writing before we act on it. Nothing's left to memory.</p>
       <div class="step-tag">Photographed before it's covered up</div>
     </div>
     <div class="step">
-      <div class="step-number">05</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M12 3.5l6.5 2.5v5.2c0 4.4-2.8 7.9-6.5 9.3-3.7-1.4-6.5-4.9-6.5-9.3V6l6.5-2.5z"/><path d="M9 12.2l2 2 4-4.4"/></svg></div>
       <h3>Built-In Buffer. Always.</h3>
       <p>Every schedule has room built in from the start — so the timeline you're given at the beginning is the one we actually run to.</p>
       <div class="step-tag">The schedule you're given is the schedule you get</div>
     </div>
     <div class="step">
-      <div class="step-number">06</div>
       <div class="step-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8.3 12.3l2.5 2.5 5-5.4"/></svg></div>
       <h3>Closeout That Closes</h3>
       <p>A final walkthrough, a finished punch list, and your sign-off. The job isn't done until you say it's done.</p>
@@ -1221,23 +1198,10 @@
 <!-- DECISION TRACKER -->
 <section class="decision-banner" id="deliverables">
   <div class="decision-banner-inner">
-    <div class="decision-banner-icon">✅</div>
-    <p class="decision-banner-text">Every decision gets flagged before it becomes a problem — trim style, fixture finish, and the dozen other choices you didn't know were choices. Explained in plain language, with a deadline that keeps your job moving.</p>
-    <div class="decision-banner-tag">Included with every project — the Decision Tracker</div>
+    <p class="decision-banner-text">You'll never be caught off guard by a decision you didn't know you had to make. Trim style, fixture finish, the dozen choices most homeowners don't see coming — we flag them early, explain the trade-offs in plain language, and give you time to decide before it holds up your job.</p>
+    <div class="decision-banner-tag">How we keep you informed, every step of the way</div>
   </div>
 </section>
-
-<!-- STATEMENT -->
-<section class="statement">
-  <div class="statement-inner">
-    <div class="section-label" style="justify-content: center; margin-bottom: 40px;">The Standard</div>
-    <blockquote>
-      "The plan's already set.<br/>The decisions are made.<br/>We've <em>run this job once already</em><br/>on paper, before we touch it."
-    </blockquote>
-  </div>
-</section>
-
-<div class="gold-rule"></div>
 
 <!-- SERVICES -->
 <section class="services" id="services">
@@ -1402,8 +1366,8 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
   <div class="cta-beam"></div>
   <div class="cta-inner">
     <div class="section-label" style="justify-content: center; margin-bottom: 32px;">Ready to Start</div>
-    <h2>Let's run your<br/>job <em>right.</em></h2>
-    <p>Tell us what you're thinking about. We'll walk you through exactly how we'd run it — before we ever shake hands.</p>
+    <h2>Let's <em>Talk.</em></h2>
+    <p>Tell us what you're working on.</p>
 
     <!-- Lead capture form — posts to Formspree (form ID xgoglgyr). Manage submissions/notifications at formspree.io. -->
     <form class="lead-form" id="leadForm" action="https://formspree.io/f/xgoglgyr" method="POST">
