@@ -815,6 +815,18 @@
     border-bottom: 2px solid var(--gold);
   }
 
+  .project-card.wide { grid-column: 1 / -1; }
+
+  .project-photo.before-after.ba-quad {
+    display: grid; grid-template-columns: 1fr 1fr;
+    aspect-ratio: auto;
+  }
+  .project-photo.before-after.ba-quad .ba-half {
+    width: 100%; height: auto; aspect-ratio: 4 / 3;
+  }
+  .project-photo.before-after.ba-quad .ba-half:nth-child(odd) { border-right: 2px solid var(--gold); }
+  .project-photo.before-after.ba-quad .ba-half:nth-child(-n+2) { border-bottom: 2px solid var(--gold); }
+
   .project-photo-label {
     font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
     color: var(--ink-faint);
@@ -1078,7 +1090,6 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
       <li><a href="#offerings">What We Do</a></li>
       <li><a href="#how">How We Work</a></li>
       <li><a href="#services">Services</a></li>
@@ -1129,29 +1140,6 @@
         <div class="offer-item-label">Custom Builds</div>
         <div class="offer-item-text">Have a vision but no drawings yet? We'll help shape it and build it.</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<div class="gold-rule"></div>
-
-<!-- ABOUT US -->
-<section class="about" id="about">
-  <div class="about-header">
-    <div class="section-label">About Us</div>
-    <h2>Two partners.<br/><em>One standard.</em></h2>
-  </div>
-
-  <div class="founder-grid">
-    <div class="founder-card">
-      <div class="founder-avatar">CR</div>
-      <h3>Cody Ridge</h3>
-      <p>Architecture coordination, owner's representation, and design management.</p>
-    </div>
-    <div class="founder-card">
-      <div class="founder-avatar">BL</div>
-      <h3>Brandon Larrison</h3>
-      <p>Framing, finish carpentry, and custom millwork.</p>
     </div>
   </div>
 </section>
@@ -1350,6 +1338,18 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
     </div>
 
     <div class="project-grid">
+      <div class="project-card wide">
+        <div class="project-photo before-after ba-quad">
+          <div class="ba-half"><img src="carmel-bathroom-before-horiz.jpg" alt="Bathroom vanity before Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">Before</span></div>
+          <div class="ba-half"><img src="carmel-bathroom-after-horiz.jpg" alt="Bathroom vanity and checkerboard tile floor after Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">After</span></div>
+          <div class="ba-half"><img src="carmel-shower-before.jpg" alt="Shower before Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">Before</span></div>
+          <div class="ba-half"><img src="carmel-shower-after.jpg" alt="Green tile shower after Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">After</span></div>
+        </div>
+        <div class="project-info">
+          <h3>Bathroom Remodel</h3>
+          <p>Carmel — new vanity, lighting, and a checkerboard tile floor, with the shower rebuilt in green tile.</p>
+        </div>
+      </div>
       <div class="project-card">
         <div class="project-photo before-after stacked">
           <div class="ba-half"><img src="bathroom-before-horiz-1.jpg" alt="Bathroom before Ridgeworks Construction remodel — Brownsburg, IN" loading="lazy"><span class="ba-label">Before</span></div>
@@ -1358,16 +1358,6 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
         <div class="project-info">
           <h3>Bathroom Remodel</h3>
           <p>Brownsburg — a dated bathroom turned into a space built entirely around what the client picked, finish by finish.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-photo before-after stacked">
-          <div class="ba-half"><img src="carmel-bathroom-before-horiz.jpg" alt="Bathroom vanity before Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">Before</span></div>
-          <div class="ba-half"><img src="carmel-bathroom-after-horiz.jpg" alt="Bathroom vanity and checkerboard tile floor after Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">After</span></div>
-        </div>
-        <div class="project-info">
-          <h3>Bathroom Remodel</h3>
-          <p>Carmel — new vanity, lighting, and a checkerboard tile floor, with the shower rebuilt in green tile.</p>
         </div>
       </div>
       <a class="project-card" href="#featured-project">
