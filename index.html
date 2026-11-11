@@ -1498,6 +1498,7 @@
         <textarea id="details" name="details" placeholder="Scope, timeline, budget range — whatever you've got."></textarea>
       </div>
       <input type="hidden" name="_subject" value="New lead from ridgeworksconstruction.com" />
+      <input type="hidden" name="source" id="leadSource" value="direct" />
       <button type="submit" class="form-submit">Send Project Details</button>
       <div class="form-note">We respond within one business day. No spam, no follow-up calls unless you ask for one.</div>
     </form>
@@ -1609,5 +1610,6 @@
 })();
 </script>
 <script>(function(){var v=document.querySelectorAll('.cw-card video');if(!v.length)return;var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;v.forEach(function(x){if(rm){x.removeAttribute('autoplay');x.pause();x.controls=true;return;}if('IntersectionObserver' in window){new IntersectionObserver(function(e){e.forEach(function(n){if(n.isIntersecting){var p=x.play();if(p&&p.catch)p.catch(function(){});}else{x.pause();}});},{threshold:0.25}).observe(x);}});})();</script>
+<script>(function(){var f=document.getElementById('leadSource');if(!f)return;var s='';try{var q=new URLSearchParams(location.search).get('src');if(q){s=q.replace(/[^a-z0-9_-]/gi,'').slice(0,30);sessionStorage.setItem('rwSrc',s);}else{s=sessionStorage.getItem('rwSrc')||'';}}catch(e){}if(s)f.value=s;})();</script>
 </body>
 </html>
