@@ -433,6 +433,11 @@
     transition: background 0.3s;
   }
   .step:hover { background: #FBF7EC; }
+  @media (min-width: 769px) {
+    .how-steps { grid-template-columns: repeat(6, 1fr); }
+    .step { grid-column: span 2; }
+    .step:nth-child(n+4) { grid-column: span 3; }
+  }
 
   .step-icon {
     width: 40px; height: 40px; margin-bottom: 24px;
@@ -754,7 +759,7 @@
   }
 
   .project-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
+    display: grid; grid-template-columns: 1fr; gap: 28px;
   }
 
   .project-card {
@@ -815,17 +820,20 @@
     border-bottom: 2px solid var(--gold);
   }
 
-  .project-card.wide { grid-column: 1 / -1; }
-
-  .project-photo.before-after.ba-quad {
-    display: grid; grid-template-columns: 1fr 1fr;
-    aspect-ratio: auto;
+  .project-photo.before-after.ba-strip {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    aspect-ratio: auto; background: var(--paper-card);
   }
-  .project-photo.before-after.ba-quad .ba-half {
-    width: 100%; height: auto; aspect-ratio: 4 / 3;
+  .ba-strip .ba-pair { display: grid; grid-template-columns: 1fr 1fr; }
+  .project-photo.before-after.ba-strip .ba-half { width: 100%; height: auto; aspect-ratio: 3 / 4; }
+  .project-photo.before-after.ba-row {
+    display: grid; grid-template-columns: 1fr 1fr; aspect-ratio: auto;
   }
-  .project-photo.before-after.ba-quad .ba-half:nth-child(odd) { border-right: 2px solid var(--gold); }
-  .project-photo.before-after.ba-quad .ba-half:nth-child(-n+2) { border-bottom: 2px solid var(--gold); }
+  .project-photo.before-after.ba-row .ba-half { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+  @media (max-width: 768px) {
+    .project-photo.before-after.ba-strip, .project-photo.before-after.ba-row { grid-template-columns: 1fr; }
+    .project-photo.before-after.ba-row .ba-half:first-child { border-right: none; border-bottom: 2px solid var(--gold); }
+  }
 
   .project-photo-label {
     font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
@@ -1327,8 +1335,6 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
 </section>
 -->
 
-<div class="gold-rule"></div>
-
 <!-- RECENT WORK / PROJECTS -->
 <section class="projects" id="projects">
   <div class="projects-inner">
@@ -1338,12 +1344,16 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
     </div>
 
     <div class="project-grid">
-      <div class="project-card wide">
-        <div class="project-photo before-after ba-quad">
-          <div class="ba-half"><img src="carmel-bathroom-before-horiz.jpg" alt="Bathroom vanity before Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">Before</span></div>
-          <div class="ba-half"><img src="carmel-bathroom-after-horiz.jpg" alt="Bathroom vanity and checkerboard tile floor after Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">After</span></div>
-          <div class="ba-half"><img src="carmel-shower-before.jpg" alt="Shower before Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">Before</span></div>
-          <div class="ba-half"><img src="carmel-shower-after.jpg" alt="Green tile shower after Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">After</span></div>
+      <div class="project-card">
+        <div class="project-photo before-after ba-strip">
+          <div class="ba-pair">
+            <div class="ba-half"><img src="carmel-p-vanity-before.jpg" alt="Bathroom vanity and floor before Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">Before</span></div>
+            <div class="ba-half"><img src="carmel-p-vanity-after.jpg" alt="Bathroom vanity and checkerboard tile floor after Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">After</span></div>
+          </div>
+          <div class="ba-pair">
+            <div class="ba-half"><img src="carmel-p-shower-before.jpg" alt="Shower before Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">Before</span></div>
+            <div class="ba-half"><img src="carmel-p-shower-after.jpg" alt="Green tile shower after Ridgeworks Construction remodel — Carmel, IN" loading="lazy"><span class="ba-label">After</span></div>
+          </div>
         </div>
         <div class="project-info">
           <h3>Bathroom Remodel</h3>
@@ -1351,7 +1361,7 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
         </div>
       </div>
       <div class="project-card">
-        <div class="project-photo before-after stacked">
+        <div class="project-photo before-after ba-row">
           <div class="ba-half"><img src="bathroom-before-horiz-1.jpg" alt="Bathroom before Ridgeworks Construction remodel — Brownsburg, IN" loading="lazy"><span class="ba-label">Before</span></div>
           <div class="ba-half"><img src="bathroom-after-horiz-1.jpg" alt="Bathroom after Ridgeworks Construction remodel — Brownsburg, IN" loading="lazy"><span class="ba-label">After</span></div>
         </div>
@@ -1361,7 +1371,7 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
         </div>
       </div>
       <a class="project-card" href="#featured-project">
-        <div class="project-photo before-after stacked">
+        <div class="project-photo before-after ba-row">
           <div class="ba-half"><img src="ola-before-horiz-1.jpg" alt="Backyard before Ridgeworks Construction outdoor living space build — McCordsville, IN" loading="lazy"><span class="ba-label">Before</span></div>
           <div class="ba-half"><img src="ola-after-horiz-1.jpg" alt="Finished custom outdoor living space built by Ridgeworks Construction — McCordsville, IN" loading="lazy"><span class="ba-label">After</span></div>
         </div>
