@@ -504,6 +504,45 @@
 
   .statement blockquote em { color: var(--gold-deep); font-style: normal; }
 
+  /* ── HERO (split) ── */
+  .hero.hero-split { display: grid; grid-template-columns: 5fr 7fr; min-height: 100vh; padding: 0; background: var(--ink); overflow: hidden; }
+  .hero-split .hero-text { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 130px 56px 90px 64px; }
+  .hero-split .hero-eyebrow { color: var(--gold-light); margin-bottom: 28px; }
+  .hero-split .hero-eyebrow::before { background: var(--gold-light); }
+  .hero-split h1 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(40px, 4.6vw, 68px); line-height: 1.06; color: #fff; margin-bottom: 44px; }
+  .hero-split h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-split .btn-ghost { color: #fff; border-color: rgba(255,255,255,0.35); }
+  .hero-split .btn-ghost:hover { border-color: #fff; }
+  .hero-rating { margin-top: 40px; display: inline-flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.72); text-decoration: none; }
+  .hero-rating b { color: var(--gold-light); font-size: 14px; letter-spacing: 3px; font-weight: 400; }
+  .hero-rating:hover { color: #fff; }
+  .hero-split .hero-photo { position: relative; min-height: 420px; }
+  .hero-split .hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; display: block; }
+
+  /* ── REVIEWS (Google) ── */
+  .rv { background: var(--paper); padding: 110px 48px; }
+  .rv-inner { max-width: 1100px; margin: 0 auto; }
+  .rv-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 48px; }
+  .rv-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 48px); line-height: 1.15; color: var(--ink); margin-top: 16px; }
+  .rv-header h2 em { font-style: italic; color: var(--gold-deep); }
+  .rv-score { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; display: inline-flex; gap: 12px; align-items: center; }
+  .rv-score b { color: var(--gold-deep); font-size: 15px; letter-spacing: 3px; font-weight: 400; }
+  .rv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .rv-card { margin: 0; background: var(--paper-card); border-top: 2px solid var(--gold); padding: 36px 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
+  .rv-card blockquote { font-size: 14.5px; line-height: 1.75; color: var(--ink-soft); font-weight: 300; }
+  .rv-card figcaption strong { display: block; font-size: 14px; color: var(--ink); font-weight: 700; margin-bottom: 4px; }
+  .rv-card figcaption span { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); }
+  .rv-link { display: inline-block; margin-top: 32px; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-deep); text-decoration: none; border-bottom: 1px solid rgba(184,150,46,0.4); padding-bottom: 3px; }
+
+  @media (max-width: 768px) {
+    .hero.hero-split { grid-template-columns: 1fr; min-height: auto; padding: 0; }
+    .hero-split .hero-photo { order: -1; min-height: 0; aspect-ratio: 4 / 3; margin-top: 52px; }
+    .hero-split .hero-text { padding: 40px 24px 56px; }
+    .hero-split h1 { font-size: 38px; margin-bottom: 32px; }
+    .rv { padding: 72px 24px; }
+    .rv-grid { grid-template-columns: 1fr; gap: 12px; }
+  }
+
   /* ── ABOUT US ── */
   .about {
     background: var(--paper);
@@ -1101,25 +1140,25 @@
       <li><a href="#offerings">What We Do</a></li>
       <li><a href="#how">How We Work</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#featured-project">Featured Project</a></li>
       <li><a href="#projects">Recent Work</a></li>
+      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact" class="nav-cta">Get Started</a></li>
     </ul>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-
-  <div class="hero-content">
-    <div class="hero-actions fade-up delay-4">
+<section class="hero hero-split">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Central Indiana</div>
+    <h1>Project coordination <em>&amp; execution.</em></h1>
+    <div class="hero-actions">
       <a href="#contact" class="btn-primary">Start Your Project</a>
       <a href="#how" class="btn-ghost">See How We Work</a>
     </div>
+    <a class="hero-rating" href="https://www.google.com/maps?cid=4026048337912018409" target="_blank" rel="noopener"><b>★★★★★</b> 5.0 on Google</a>
   </div>
-
-  <div class="hero-scroll">Scroll</div>
+  <div class="hero-photo"><img src="hero-outdoor-living.jpg" alt="Finished custom outdoor living space built by Ridgeworks Construction — McCordsville, IN"></div>
 </section>
 
 <div class="gold-rule"></div>
@@ -1258,83 +1297,6 @@
 
 <div class="gold-rule"></div>
 
-<!-- FEATURED PROJECT -->
-<section class="featured-project" id="featured-project">
-  <div class="featured-inner">
-    <div class="featured-header">
-      <div class="section-label">Featured Project</div>
-      <h2>From a sketch on paper<br/>to a <em>finished</em> outdoor living space.</h2>
-      <p>A backyard that used to flood, turned into a fully custom outdoor living space — designed by Ridgeworks Construction, built by Ridgeworks Construction, start to finish under one plan.</p>
-    </div>
-
-    <div class="featured-hero">
-      <img src="featured-hero.jpg" alt="Finished custom outdoor living space built by Ridgeworks Construction — Central Indiana" loading="lazy">
-    </div>
-
-    <div class="process-label">The Build</div>
-    <div class="process-grid">
-      <div class="process-step">
-        <div class="process-photo"><img src="ola-process-0.jpg" alt="Existing site condition before outdoor living space build — Central Indiana" loading="lazy"></div>
-        <div class="process-step-num">Step 01</div>
-        <h4>Site Assessment</h4>
-        <p>Walked the property with the client to review drainage, grade, and existing conditions — every decision after this gets built around what's actually there, not assumptions.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-photo"><img src="ola-process-1.jpg" alt="Downspout and irrigation tie-in trenching" loading="lazy"></div>
-        <div class="process-step-num">Step 02</div>
-        <h4>Drainage &amp; Irrigation Tie-In</h4>
-        <p>Downspout runs and irrigation lines routed and tied in before anything gets covered.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-photo"><img src="ola-process-2.jpg" alt="Excavated and compacted stone base for walkway, built to eliminate standing water" loading="lazy"></div>
-        <div class="process-step-num">Step 03</div>
-        <h4>Excavation &amp; Base</h4>
-        <p>This area held standing water before we touched it. Dug down 6", compacted 5" of stone, topped with 1" of decorative stone — so it drains instead of pooling.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-photo"><img src="ola-process-3.jpg" alt="Concrete slab pour for patio" loading="lazy"></div>
-        <div class="process-step-num">Step 04</div>
-        <h4>Slab Pour</h4>
-        <p>Patio poured to spec — the foundation the entire outdoor space is built on.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-photo"><img src="ola-process-4.jpg" alt="Finished custom outdoor living space" loading="lazy"></div>
-        <div class="process-step-num">Step 05</div>
-        <h4>Finished</h4>
-        <p>Custom patio, planting beds, and outdoor living space — coordinated and closed out.</p>
-      </div>
-    </div>
-
-    <div class="process-label" style="margin-top: 64px;">The Details</div>
-    <div class="process-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 536px;">
-      <div class="process-step">
-        <div class="process-photo"><img src="detail-1.jpg" alt="Planting bed detail along outdoor living space" loading="lazy"></div>
-      </div>
-      <div class="process-step">
-        <div class="process-photo"><img src="detail-2.jpg" alt="Composite trim meeting poured concrete step detail" loading="lazy"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="gold-rule"></div>
-
-<!--
-REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to bring it back.
-<section class="reviews" id="reviews">
-  <div class="reviews-header">
-    <div class="section-label">Client Reviews</div>
-    <h2>What clients say<br/>once the job's <em>done.</em></h2>
-    <p>Real feedback from real Ridgeworks clients — added here as projects close out and reviews come in.</p>
-  </div>
-  <div class="senja-embed" style="max-width: 1100px; margin: 48px auto 0;">
-    <script type="text/javascript" src="https://widget.senja.io/js/iframeResizer.min.js"></script>
-    <iframe id="wall-of-love-a8jR7x9" src="https://senja.io/p/ridgeworksconstruction/a8jR7x9?hideNavigation=true&embed=true" title="Ridgeworks Construction Client Reviews" frameborder="0" scrolling="no" width="100%" loading="lazy"></iframe>
-    <script type="text/javascript">document.addEventListener("DOMContentLoaded", function () {iFrameResize({log: false, checkOrigin: false}, "#wall-of-love-a8jR7x9");});</script>
-  </div>
-</section>
--->
-
 <!-- RECENT WORK / PROJECTS -->
 <section class="projects" id="projects">
   <div class="projects-inner">
@@ -1362,6 +1324,16 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
       </div>
       <div class="project-card">
         <div class="project-photo before-after ba-row">
+          <div class="ba-half"><img src="fairland-before.jpg" alt="Second-story gable with old patio slider and weathered siding before Ridgeworks Construction exterior work — Fairland, IN" loading="lazy"><span class="ba-label">Before</span></div>
+          <div class="ba-half"><img src="fairland-after.jpg" alt="Second-story gable with new window and fresh siding after Ridgeworks Construction exterior work — Fairland, IN" loading="lazy"><span class="ba-label">After</span></div>
+        </div>
+        <div class="project-info">
+          <h3>Exterior Update</h3>
+          <p>Fairland — the client removed an old second-story deck, so we swapped the patio slider for a window and closed in the gable with new siding.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-photo before-after ba-row">
           <div class="ba-half"><img src="bathroom-before-horiz-1.jpg" alt="Bathroom before Ridgeworks Construction remodel — Brownsburg, IN" loading="lazy"><span class="ba-label">Before</span></div>
           <div class="ba-half"><img src="bathroom-after-horiz-1.jpg" alt="Bathroom after Ridgeworks Construction remodel — Brownsburg, IN" loading="lazy"><span class="ba-label">After</span></div>
         </div>
@@ -1370,17 +1342,46 @@ REVIEWS SECTION HIDDEN (temporarily disabled) — remove this comment wrapper to
           <p>Brownsburg — a dated bathroom turned into a space built entirely around what the client picked, finish by finish.</p>
         </div>
       </div>
-      <a class="project-card" href="#featured-project">
+      <div class="project-card">
         <div class="project-photo before-after ba-row">
           <div class="ba-half"><img src="ola-before-horiz-1.jpg" alt="Backyard before Ridgeworks Construction outdoor living space build — McCordsville, IN" loading="lazy"><span class="ba-label">Before</span></div>
           <div class="ba-half"><img src="ola-after-horiz-1.jpg" alt="Finished custom outdoor living space built by Ridgeworks Construction — McCordsville, IN" loading="lazy"><span class="ba-label">After</span></div>
         </div>
         <div class="project-info">
           <h3>Outdoor Living Space</h3>
-          <p>McCordsville — a backyard that used to flood, turned into a finished outdoor living space, designed and built start to finish. See the full build below ↓</p>
+          <p>McCordsville — a backyard that used to flood, turned into a finished outdoor living space, designed and built start to finish.</p>
         </div>
-      </a>
+      </div>
     </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="rv" id="reviews">
+  <div class="rv-inner">
+    <div class="rv-header">
+      <div>
+        <div class="section-label">Client Reviews</div>
+        <h2>What clients <em>say.</em></h2>
+      </div>
+      <a class="rv-score" href="https://www.google.com/maps?cid=4026048337912018409" target="_blank" rel="noopener"><b>★★★★★</b> 5.0 · 4 Google reviews</a>
+    </div>
+    <div class="rv-grid">
+        <figure class="rv-card">
+          <blockquote>“Cody and Brandon could not have been more great from start to finish. They were communicative, timely and effective during the whole process of remodeling our primary bathroom. They worked to stay within budget, ran everything by us before doing something that would add more to the scope, and were extremely thoughtful about their workspace during the month long project. Highly recommend using them - their work is topnotch!”</blockquote>
+          <figcaption><strong>Zoe H.</strong><span>Bathroom remodel · Google review</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <blockquote>“I cannot express enough the gratitude for the work that was completed on my commercial space. They took my vision and made it reality and in record time. This is a professional one stop contractor. I needed an electrician for an unforeseen issue and Cody had an amazing electrician the next morning fixing the problems. Brandon is an amazing artist with wood projects.”</blockquote>
+          <figcaption><strong>Nadine P.</strong><span>Commercial space · Google review</span></figcaption>
+        </figure>
+        <figure class="rv-card">
+          <blockquote>“Cody and Brandon were very accommodating to my needs for coming out and assessing/making a timely quote. They did their homework in my building permit needs, answered all of my questions promptly and respectfully. … I feel they work with honesty, transparency and integrity! I would recommend them.”</blockquote>
+          <figcaption><strong>Melinda Q.</strong><span>Quote &amp; permitting · Google review</span></figcaption>
+        </figure>
+    </div>
+    <a class="rv-link" href="https://www.google.com/maps?cid=4026048337912018409" target="_blank" rel="noopener">Read all reviews on Google →</a>
   </div>
 </section>
 
