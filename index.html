@@ -1118,6 +1118,23 @@
     .footer-links { display: none; }
     .form-row { grid-template-columns: 1fr; gap: 0; }
   }
+
+  /* ── CUSTOM WORK ── */
+  .cw { background: var(--paper-card); padding: 120px 48px; }
+  .cw-inner { max-width: 1100px; margin: 0 auto; }
+  .cw-header { margin-bottom: 48px; }
+  .cw-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 48px); line-height: 1.15; color: var(--ink); margin-top: 16px; }
+  .cw-header h2 em { font-style: italic; color: var(--gold-deep); }
+  .cw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .cw-card { margin: 0; background: var(--paper); }
+  .cw-card .project-photo { aspect-ratio: 3 / 4; display: block; }
+  .cw-card .project-photo img { cursor: zoom-in; }
+  .cw-card figcaption { padding: 20px 24px 24px; }
+  .cw-card figcaption strong { display: block; font-size: 15px; color: var(--ink); margin-bottom: 6px; }
+  .cw-card figcaption span { font-size: 13.5px; color: var(--ink-soft); line-height: 1.65; font-weight: 300; }
+  .cw-cta { margin-top: 40px; }
+  @media (max-width: 900px) { .cw-grid { grid-template-columns: 1fr; max-width: 480px; } }
+  @media (max-width: 768px) { .cw { padding: 72px 24px; } }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKLH091WMT"></script>
@@ -1305,6 +1322,30 @@
 <div class="gold-rule"></div>
 
 <!-- RECENT WORK / PROJECTS -->
+<section class="cw" id="custom">
+  <div class="cw-inner">
+    <div class="cw-header">
+      <div class="section-label">Custom Work</div>
+      <h2>Furniture, <em>built to order.</em></h2>
+    </div>
+    <div class="cw-grid">
+      <figure class="cw-card">
+        <div class="project-photo"><img src="cw-oak-table.jpg" alt="Custom coffee table with an end-grain checkerboard top and crossed-leg base, built by Ridgeworks Construction" loading="lazy"></div>
+        <figcaption><strong>Custom Coffee Table</strong><span>End-grain checkerboard top on a crossed-leg base. Built to order.</span></figcaption>
+      </figure>
+      <figure class="cw-card">
+        <div class="project-photo"><img src="cw-court-table-a.jpg" alt="Custom coffee table with a court-floor wood top, inlaid logo, gloss finish and slatted lower shelf, built by Ridgeworks Construction" loading="lazy"></div>
+        <figcaption><strong>Custom Coffee Table</strong><span>Court-floor top with an inlaid logo under a clear gloss finish, plus a slatted lower shelf.</span></figcaption>
+      </figure>
+      <figure class="cw-card">
+        <div class="project-photo"><img src="cw-court-table-b.jpg" alt="Custom coffee table with a court-floor wood top, inlaid logo and red-stained frame, built by Ridgeworks Construction" loading="lazy"></div>
+        <figcaption><strong>Custom Coffee Table</strong><span>Court-floor top with an inlaid logo, framed in a deep red stain.</span></figcaption>
+      </figure>
+    </div>
+    <div class="cw-cta"><a class="btn-primary" href="#contact">Start a Custom Project</a></div>
+  </div>
+</section>
+
 <section class="projects" id="projects">
   <div class="projects-inner">
     <div class="projects-header">
